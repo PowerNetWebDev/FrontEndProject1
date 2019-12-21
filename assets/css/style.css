@@ -1,0 +1,297 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+p {
+  font-size: 1.2em !important;
+  line-height: 1.8em !important;
+}
+
+nav#navlogo {
+  width: auto;
+  height: 32px;
+}
+
+nav a.navbar-brand img {
+  width: 200px;
+}
+
+nav a.nav-link {
+  line-height: inherit;
+}
+
+nav .nav-item.nav-link.active {
+  color: #c62828 !important;
+}
+
+nav #biologo {
+  width: 60%;
+}
+
+section {
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5em 0.75em;
+}
+
+section p {
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+section.titled-section {
+  padding-top: 2.4em;
+  padding-bottom: 6.4em;
+}
+
+section.titled-section .section-title {
+  text-align: center;
+  padding: 1.5em 0;
+}
+
+section.titled-section .section-title .title-text {
+  display: inline;
+  font-weight: 500;
+  text-indent: 0.5em;
+  letter-spacing: 0.5em;
+  color: #555555;
+  padding: 0.25em 0.5em;
+  text-align: center;
+  border-bottom: 0.125em solid #c62828;
+}
+
+section.silver-section {
+  background: url("../img/section.png");
+}
+
+section#hero {
+  display: block;
+  margin: unset;
+  padding: unset;
+}
+
+section#hero .carousel-item img {
+  height: 100vh;
+}
+
+section#bio {
+  padding-top: 4em;
+  min-height: 70vh;
+}
+
+section#feat {
+  position: relative;
+  background: #f5f5f5;
+  background: linear-gradient(135deg, whitesmoke 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+section#feat .separator-feat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20vh;
+  width: 100%;
+  -webkit-clip-path: ellipse(66% 68% at 65% 7%);
+          clip-path: ellipse(66% 68% at 65% 7%);
+  background: white;
+}
+
+section#feat div[class^="col-"] img.servIcon {
+  height: 11.25em;
+  margin: 3.25em 0;
+  width: auto;
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+section#feat div[class^="col-"]:hover img.servIcon {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  height: 12.5em;
+  margin: 2.625em 0;
+}
+
+section#strength .strength {
+  position: relative;
+  padding: unset;
+  margin-top: 5em;
+}
+
+section#strength .strength span.vr {
+  z-index: -1;
+  position: absolute;
+  left: calc(50% - 0.1em);
+  width: 0.2em;
+  border-radius: 4em;
+  background: rgba(33, 33, 33, 0.125);
+}
+
+section#strength .strength li {
+  position: relative;
+  list-style: none;
+  width: 50%;
+}
+
+section#strength .strength li .list-body {
+  background: white;
+  border-radius: 0.5em;
+  border: 0.0625em solid rgba(33, 33, 33, 0.075);
+  -webkit-box-shadow: 0 0.125em 1em 0.125em rgba(33, 33, 33, 0.1);
+          box-shadow: 0 0.125em 1em 0.125em rgba(33, 33, 33, 0.1);
+}
+
+section#strength .strength li .list-body .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.25em;
+}
+
+section#strength .strength li .list-body .img img {
+  height: auto;
+  width: 100%;
+}
+
+section#strength .strength li .list-body .txt {
+  padding: 1.25em;
+}
+
+section#strength .strength li span.arrow {
+  position: absolute;
+  top: 3.75em;
+  width: 1.5em;
+  height: 1.5em;
+  background: white;
+  border: 0.0625em solid rgba(33, 33, 33, 0.075);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+section#strength .strength li span.dot {
+  position: absolute;
+  top: 4em;
+  width: 1em;
+  height: 1em;
+  border-radius: 2em;
+  border: 0.0625em solid rgba(33, 33, 33, 0.075);
+  background: #f5f5f5;
+}
+
+section#strength .strength li:nth-child(odd) {
+  float: left;
+  margin-bottom: 4em;
+}
+
+section#strength .strength li:nth-child(odd) .list-body {
+  margin-right: 3em;
+}
+
+section#strength .strength li:nth-child(odd) .img {
+  border-right: 0.1em solid rgba(33, 33, 33, 0.125);
+}
+
+section#strength .strength li:nth-child(odd) span.arrow {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  right: 2.4em;
+}
+
+section#strength .strength li:nth-child(odd) span.dot {
+  right: -0.5em;
+}
+
+section#strength .strength li:nth-child(even) {
+  float: right;
+  margin-top: 4em;
+  margin-bottom: 2em;
+}
+
+section#strength .strength li:nth-child(even) .list-body {
+  margin-left: 3em;
+}
+
+section#strength .strength li:nth-child(even) .img {
+  border-left: 0.1em solid rgba(33, 33, 33, 0.125);
+}
+
+section#strength .strength li:nth-child(even) span.dot {
+  left: -0.5em;
+}
+
+section#strength .strength li:nth-child(even) span.arrow {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  left: 2.4em;
+}
+
+section#strength .strength .separator {
+  position: absolute;
+  height: 100%;
+  width: 1em;
+  background: #212121;
+}
+
+section#client {
+  position: relative;
+}
+
+section#client svg {
+  position: absolute;
+  top: 60%;
+}
+
+section#client .card {
+  margin: 1.75em 0;
+}
+
+section#client .card .card-body {
+  height: 13.625em;
+  padding: 3em 0;
+}
+
+section#client .card .card-body .card-img-top {
+  height: 100%;
+  width: auto;
+}
+
+footer {
+  background: #212121;
+}
+
+footer p {
+  font-size: 1em !important;
+}
+
+footer strong {
+  border-bottom: 0.1em solid #c62828;
+}
+
+.animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.75s;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.gone {
+  opacity: 0;
+}
+/*# sourceMappingURL=style.css.map */
