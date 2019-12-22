@@ -114,12 +114,20 @@ footer strong {
   width: 50%;
 }
 
+.timeline .timeline-item:hover .timeline-body {
+  -webkit-transform: scale(1.05) !important;
+          transform: scale(1.05) !important;
+}
+
 .timeline .timeline-item .timeline-body {
+  position: relative;
   background: white;
   border-radius: 0.5em;
   border: 0.0625em solid rgba(33, 33, 33, 0.075);
   -webkit-box-shadow: 0 0.125em 1em 0.125em rgba(33, 33, 33, 0.1);
           box-shadow: 0 0.125em 1em 0.125em rgba(33, 33, 33, 0.1);
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
 }
 
 .timeline .timeline-item .timeline-body .timeline-img {
@@ -181,7 +189,7 @@ footer strong {
 .timeline .timeline-item:nth-child(odd) .timeline-arrow {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  right: 2.4em;
+  right: -0.73em;
 }
 
 .timeline .timeline-item:nth-child(odd) .timeline-dot {
@@ -205,7 +213,7 @@ footer strong {
 .timeline .timeline-item:nth-child(even) .timeline-arrow {
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
-  left: 2.4em;
+  left: -0.73em;
 }
 
 .timeline .timeline-item:nth-child(even) .timeline-dot {
@@ -217,5 +225,17 @@ footer strong {
   height: 100%;
   width: 1em;
   background: #212121;
+}
+
+.gmap_canvas {
+  margin-top: 5em;
+  margin-bottom: 7em;
+  height: 60vh;
+  width: 100%;
+}
+
+.gmap_canvas iframe {
+  height: 100%;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

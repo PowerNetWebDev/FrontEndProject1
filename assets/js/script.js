@@ -46,7 +46,7 @@ jump = (selector) => {
 // I RECOMMEND TO USE ID AS A SELECTOR
 timelineSetup = (selectorId) => {
     $(selectorId).append('<span class="timeline-vr"></span>');
-    $(selectorId).find('.timeline-item').append('<span class="timeline-arrow"></span>');
+    $(selectorId).find('.timeline-item .timeline-body').append('<span class="timeline-arrow"></span>');
     $(selectorId).find('.timeline-item').append('<span class="timeline-dot"></span>');
     $(selectorId).find('.timeline-item:odd .timeline-body .timeline-img').addClass('order-md-2');
     $(selectorId).find('.timeline-item:odd .timeline-body .timeline-txt').addClass('order-md-1');
