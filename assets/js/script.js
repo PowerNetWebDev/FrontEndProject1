@@ -15,8 +15,8 @@ isScrolled = (el, funcWhile) => {
     scrollTop = $(window).scrollTop() + $('.navbar:eq(0)').outerHeight(true);
     scrollBot = $(window).scrollTop() + $(window).height();
     notAnimated = !($(el).hasClass('animated'));
+    el.css({'opacity': '0'});
     if (notAnimated) {
-        el.css({'opacity': '0'});
         if (scrollBot > elTop && scrollTop < elTop) {
             el.css({'opacity': '1'});
             funcWhile();
