@@ -1,6 +1,6 @@
 // Onload event
 $(document).ready(() => {
-    itemStrength();
+    timelineSetup('#strength-list');
     navFade();
     secFade();
 });
@@ -52,19 +52,19 @@ jump = (selector) => {
 }
 
 // item strength config
-itemStrength = () => {
-    $('.strength').append('<span class="vr"></span>');
-    $('.strength li').append('<span class="arrow"></span>');
-    $('.strength li').append('<span class="dot"></span>');
-    $('.strength .list-body:odd .img').addClass('order-md-2');
-    $('.strength .list-body:odd .txt').addClass('order-md-1');
+timelineSetup = (selectorId) => {
+    $(selectorId).append('<span class="timeline-vr"></span>');
+    $(selectorId).find('.timeline-item').append('<span class="timeline-arrow"></span>');
+    $(selectorId).find('.timeline-item').append('<span class="timeline-dot"></span>');
+    $(selectorId).find('.timeline-item:odd .timeline-body .timeline-img').addClass('order-md-2');
+    $(selectorId).find('.timeline-item:odd .timeline-body .timeline-txt').addClass('order-md-1');
 
-    strength = $('ul.strength:eq(0) .list-body');
-    strengthHeight = $(strength[strength.length - 1]).offset().top + $(strength[strength.length - 1]).outerHeight(true) - $(strength[0]).offset().top;
-    vr = $('ul.strength span.vr');
+    timeline = $(selectorId).find('.timeline-body');
+    timelineHeight = $(timeline[timeline.length - 1]).offset().top + $(timeline[timeline.length - 1]).outerHeight(true) - $(timeline[0]).offset().top;
+    vr = $(selectorId).find('.timeline-vr');
 
     $(vr).css({
-        'height': strengthHeight + 'px',
+        'height': timelineHeight + 'px',
     })
 }
 
@@ -100,13 +100,13 @@ secFade = () => {
         },
     );
     if ($(window).width() >= 992) {
-        section = $('section#strength span.vr');
+        section = $('#strength-list .timeline-vr');
         isScrolled(section,
             () => {
                 $(section).addClass('animated fadeIn');
             },
         );
-        section = $('section#strength li');
+        section = $('#strength-list .timeline-item');
         isScrolled(section,
             () => {
                 $(section).addClass('animated fadeInUp');;
