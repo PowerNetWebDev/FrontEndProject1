@@ -110,10 +110,6 @@ section.titled-section .section-title .title-body .title-underline {
   background: #f44336;
 }
 
-section.silver-section {
-  background: url("../../img/section.png");
-}
-
 footer {
   background: #212121;
 }
@@ -287,7 +283,7 @@ footer strong {
 }
 
 section#hero {
-  background: url("../../img/software/hero.png");
+  background: url("../img/software/hero.png");
   background-position-x: center;
 }
 
