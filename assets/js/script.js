@@ -1,15 +1,5 @@
-// Onload event
-$(document).ready(() => {
-    timelineSetup('#strength-list');
-    navFade();
-    secFade();
-});
-
-// Onscroll event
-$(window).on('scroll', () => {
-    navFade();
-    secFade();
-});
+// THIS IS A GLOBAL SCRIPT THAT NEEDED BY EVERY PAGE TO WORK PROPERLY
+// REQUIRE JQUERY AND IT'S DEPENDENCY AND ANIMATE.CSS TO WORK PROPERLY
 
 isScrolled = (el, funcWhile) => {
     elTop = $(el).offset().top;
@@ -27,7 +17,8 @@ isScrolled = (el, funcWhile) => {
     }
 }
 
-// Navbar fade in by scroll
+// NAVBAR FADE IN TRANTITION BY SCROLL
+// CALL THIS FUNCTION ON SCROLL EVENT
 navFade = () => {
     navbar = $('.navbar:eq(0)');
     hero = $('section#hero');
@@ -41,7 +32,7 @@ navFade = () => {
     });
 }
 
-// Navigation to specific element
+// JUMP TO SPECIFIC ELEMENT WITH SMOOTH SCROLL TRANTITION
 jump = (selector) => {
     el = $(selector);
 
@@ -51,7 +42,8 @@ jump = (selector) => {
     });
 }
 
-// item strength config
+// FUNCTION TO SETUP A TIMELINE LAYOUT WITH ELEMENT SELECTOR AS A PARAMETER,
+// I RECOMMEND TO USE ID AS A SELECTOR
 timelineSetup = (selectorId) => {
     $(selectorId).append('<span class="timeline-vr"></span>');
     $(selectorId).find('.timeline-item').append('<span class="timeline-arrow"></span>');
@@ -66,71 +58,4 @@ timelineSetup = (selectorId) => {
     $(vr).css({
         'height': timelineHeight + 'px',
     })
-}
-
-// Fade Trantition Section
-secFade = () => {
-    // Bio
-    section = $('section#bio .container');
-    isScrolled(section,
-        () => {
-            $(section).addClass('animated');
-            $(section).find('.col-md-5:eq(0)').addClass('animated fadeInRight');
-            $(section).find('.col-md-7:eq(0)').addClass('animated fadeInUp');
-        },
-    );
-
-    // Services
-    section = $('section#feat .row');
-    isScrolled(section,
-        () => {
-            $(section).addClass('animated');
-            $(section).find('.col-md-6:eq(0)').addClass('animated fadeInLeft');
-            $(section).find('.col-md-6:eq(0) p').addClass('animated fadeInUp');
-            $(section).find('.col-md-6:eq(1)').addClass('animated fadeInRight');
-            $(section).find('.col-md-6:eq(1) p').addClass('animated fadeInUp');
-        },
-    );
-
-    // Strength
-    section = $('section#strength .section-title');
-    isScrolled(section,
-        () => {
-            $(section).addClass('animated fadeInUp');
-        },
-    );
-    if ($(window).width() >= 992) {
-        section = $('#strength-list .timeline-vr');
-        isScrolled(section,
-            () => {
-                $(section).addClass('animated fadeIn');
-            },
-        );
-        section = $('#strength-list .timeline-item');
-        isScrolled(section,
-            () => {
-                $(section).addClass('animated fadeInUp');;
-            },
-        );
-    }
-
-    // Clients
-    section = $('section#client .section-title');
-    isScrolled(section,
-        () => {
-            $(section).addClass('animated fadeInUp');
-        },
-    );
-    if ($(window).width() >= 992) {
-        section = $('section#client .row');
-        isScrolled(section,
-            () => {
-                $(section).addClass('animated fadeInUp');
-                $(section).find('.col-lg-4:eq(0)').addClass('animated fadeInLeft');
-                $(section).find('.col-lg-4:eq(2)').addClass('animated fadeInRight');
-                $(section).find('.col-lg-4:eq(3)').addClass('animated fadeInLeft');
-                $(section).find('.col-lg-4:eq(5)').addClass('animated fadeInRight');
-            },
-        );
-    }
 }
