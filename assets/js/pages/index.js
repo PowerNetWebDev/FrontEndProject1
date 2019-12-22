@@ -4,13 +4,11 @@
 // WHEN THE DOCUMENT IS READY
 $(document).ready(() => {
     timelineSetup('#strength-list');
-    navFade();
     secFade();
 });
 
 // WHILE USER SCROLL THE PAGE
 $(window).on('scroll', () => {
-    navFade();
     secFade();
 });
 
@@ -80,4 +78,22 @@ secFade = () => {
             },
         );
     }
+
+    // OUR OFFICE
+    section = $('section#loc .section-title');
+    isScrolled(section,
+        () => {
+            $(section).addClass('animated fadeInUp');
+        },
+    );
+    section = $('section#loc .gmap_canvas');
+    isScrolled(section,
+        () => {
+            $(section).addClass('animated fadeInUp');
+            $(section).find('.col-lg-4:eq(0)').addClass('animated fadeInLeft');
+            $(section).find('.col-lg-4:eq(2)').addClass('animated fadeInRight');
+            $(section).find('.col-lg-4:eq(3)').addClass('animated fadeInLeft');
+            $(section).find('.col-lg-4:eq(5)').addClass('animated fadeInRight');
+        },
+    );
 }

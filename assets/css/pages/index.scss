@@ -1,9 +1,11 @@
 // THIS STYLE IS REQUIRED BY INDEX PAGE
 
-@import 'variable';
+@import "./components/variable";
+@import "./components/common";
+@import "./components/timeline-layout";
 
 // HERO(CAROUSEL)
-section{
+section {
   &#hero {
     display: block;
     margin: unset;
@@ -54,9 +56,9 @@ section{
   // CLIENT
   &#client {
     position: relative;
-    svg{
+    svg {
       position: absolute;
-      top: 60%;  
+      top: 60%;
     }
     .card {
       margin: 1.75em 0;
@@ -69,5 +71,17 @@ section{
         }
       }
     }
+  }
+}
+
+// GOOGLE MAP EMBED
+.gmap_canvas {
+  margin-top: 5em;
+  margin-bottom: 7em;
+  height: 60vh;
+  width: 100%;
+  iframe {
+    height: 60vh;
+    width: 100%;
   }
 }

@@ -1,0 +1,122 @@
+@import 'variable';
+
+// TIMELINE-LAYOUT
+.timeline {
+  position: relative;
+  padding: unset;
+  margin-top: 5em;
+  .timeline-vr {
+    z-index: -1;
+    position: absolute;
+    left: calc(50% - 0.1em);
+    width: 0.2em;
+    border-radius: 4em;
+    background: rgba($color: $darkColor, $alpha: 0.125);
+  }
+  .timeline-item {
+    position: relative;
+    list-style: none;
+    width: 50%;
+    &:hover {
+      .timeline-body {
+        transform: scale(1.05) !important;
+        background: $primColor;
+        color: white;
+        .timeline-img {
+          filter: invert(100%) brightness(300%);
+        }
+      }
+      .timeline-arrow {
+        background: $primColor;
+      }
+      .timeline-dot {
+        background: $primColor;
+      }
+    }
+    .timeline-body {
+      position: relative;
+      background: white;
+      border-radius: 0.5em;
+      border: 0.0625em solid rgba($color: $darkColor, $alpha: 0.075);
+      box-shadow: 0 0.125em 1em 0.125em rgba($color: $darkColor, $alpha: 0.1);
+      transition: all ease-in-out 0.25s;
+      .timeline-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.25em;
+        transition: all ease-in-out 0.25s;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+      .timeline-txt {
+        padding: 1.25em;
+      }
+    }
+    .timeline-arrow {
+      position: absolute;
+      top: 3.75em;
+      width: 1.5em;
+      height: 1.5em;
+      background: white;
+      border: 0.0625em solid rgba($color: $darkColor, $alpha: 0.075);
+      clip-path: polygon(0 0, 100% 0, 100% 100%);
+      transition: all ease-in-out 0.25s;
+    }
+    .timeline-dot {
+      position: absolute;
+      top: 4em;
+      width: 1em;
+      height: 1em;
+      border-radius: 2em;
+      border: 0.0625em solid rgba($color: $darkColor, $alpha: 0.075);
+      background: $lgreyColor;
+      transition: all ease-in-out 0.25s;
+    }
+    // ODD ITEM ON LEFT SIDE
+    &:nth-child(odd) {
+      float: left;
+      margin-bottom: 4em;
+      .timeline-body {
+        margin-right: 3em;
+      }
+      .timeline-img {
+        border-right: 0.1em solid rgba($color: $darkColor, $alpha: 0.125);
+      }
+      .timeline-arrow {
+        transform: rotate(45deg);
+        right: -0.73em;
+      }
+      .timeline-dot {
+        right: -0.5em;
+      }
+    }
+    // EVEN ITEM ON RIGHT SIDE
+    &:nth-child(even) {
+      float: right;
+      margin-top: 4em;
+      margin-bottom: 2em;
+      .timeline-body {
+        margin-left: 3em;
+      }
+      .timeline-img {
+        border-left: 0.1em solid rgba($color: $darkColor, $alpha: 0.125);
+      }
+      .timeline-arrow {
+        transform: rotate(225deg);
+        left: -0.73em;
+      }
+      .timeline-dot {
+        left: -0.5em;
+      }
+    }
+  }
+  .separator {
+    position: absolute;
+    height: 100%;
+    width: 1em;
+    background: $darkColor;
+  }
+}

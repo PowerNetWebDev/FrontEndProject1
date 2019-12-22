@@ -1,0 +1,38 @@
+@import "./components/variable";
+@import "./components/common";
+@import "./components/software_services-layout";
+
+section {
+  &#hero {
+    background: url("../../img/software/hero.png");
+    background-position-x: center;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      #hero-title {
+        color: $primColorAlt;
+        text-align: center;
+        font-weight: 600;
+        width: fit-content;
+        text-shadow: 2px 2px 2px rgba($color: $darkColor, $alpha: 0.5);
+      }
+      #hero-text {
+        text-align: center;
+      }
+      #hero-more {
+        width: fit-content;
+        padding: 0.5em 1em;
+        text-align: center;
+        color: $primColorAlt;
+        border: 1px solid $primColorAlt;
+        border-radius: 0.2em;
+      }
+    }
+  }
+}
+
+// OVERRIDE
+.title-underline {
+  background: $primColorAlt !important;
+}

@@ -1,6 +1,14 @@
 // THIS IS A GLOBAL SCRIPT THAT NEEDED BY EVERY PAGE TO WORK PROPERLY
 // REQUIRE JQUERY AND IT'S DEPENDENCY AND ANIMATE.CSS TO WORK PROPERLY
 
+$(document).ready(() => {
+    navFade();
+});
+
+$(window).on('scroll', () => {
+    navFade();
+});
+
 isScrolled = (el, funcWhile) => {
     elTop = $(el).offset().top;
     elBot = $(el).offset().top + $(el).outerHeight(true);
@@ -37,7 +45,7 @@ jump = (selector) => {
     el = $(selector);
 
     window.scrollTo({
-        top: el.offset().top,
+        top: $(el).offset().top,
         behavior: 'smooth'
     });
 }
@@ -58,4 +66,8 @@ timelineSetup = (selectorId) => {
     $(vr).css({
         'height': timelineHeight + 'px',
     })
+}
+
+vListSetup = () => {
+    $('.vertical-list.ballon .list-body').append('<span class="list-arrow"></span>');
 }

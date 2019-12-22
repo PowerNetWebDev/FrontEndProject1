@@ -1,98 +1,3 @@
-* {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-p {
-  font-size: 1.2em !important;
-  line-height: 1.8em !important;
-}
-
-nav#navlogo {
-  width: auto;
-  height: 32px;
-}
-
-nav a.navbar-brand img {
-  width: 200px;
-}
-
-nav a.nav-link {
-  line-height: inherit;
-}
-
-nav .nav-link.active {
-  color: #c62828 !important;
-}
-
-nav #biologo {
-  width: 60%;
-}
-
-section {
-  min-height: 90vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 1.5em 0.75em;
-}
-
-section p {
-  font-size: 1.5em;
-  font-weight: 300;
-  line-height: 1.5em;
-}
-
-section.titled-section {
-  padding-top: 2.4em;
-  padding-bottom: 6.4em;
-}
-
-section.titled-section .section-title {
-  text-align: center;
-  padding: 1.5em 0;
-}
-
-section.titled-section .section-title .title-text {
-  display: inline;
-  font-weight: 500;
-  text-indent: 0.5em;
-  letter-spacing: 0.5em;
-  color: #555555;
-  padding: 0.25em 0.5em;
-  text-align: center;
-  border-bottom: 0.125em solid #c62828;
-}
-
-section.silver-section {
-  background: url("../img/section.png");
-}
-
-footer {
-  background: #212121;
-}
-
-footer p {
-  font-size: 1em !important;
-}
-
-footer strong {
-  border-bottom: 0.1em solid #c62828;
-}
-
-.animated {
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.75s;
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
-}
-
 .timeline {
   position: relative;
   padding: unset;
@@ -117,6 +22,21 @@ footer strong {
 .timeline .timeline-item:hover .timeline-body {
   -webkit-transform: scale(1.05) !important;
           transform: scale(1.05) !important;
+  background: #f44336;
+  color: white;
+}
+
+.timeline .timeline-item:hover .timeline-body .timeline-img {
+  -webkit-filter: invert(100%) brightness(300%);
+          filter: invert(100%) brightness(300%);
+}
+
+.timeline .timeline-item:hover .timeline-arrow {
+  background: #f44336;
+}
+
+.timeline .timeline-item:hover .timeline-dot {
+  background: #f44336;
 }
 
 .timeline .timeline-item .timeline-body {
@@ -141,6 +61,8 @@ footer strong {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1.25em;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
 }
 
 .timeline .timeline-item .timeline-body .timeline-img img {
@@ -161,6 +83,8 @@ footer strong {
   border: 0.0625em solid rgba(33, 33, 33, 0.075);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%);
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
 }
 
 .timeline .timeline-item .timeline-dot {
@@ -171,6 +95,8 @@ footer strong {
   border-radius: 2em;
   border: 0.0625em solid rgba(33, 33, 33, 0.075);
   background: #f5f5f5;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
 }
 
 .timeline .timeline-item:nth-child(odd) {
@@ -226,16 +152,4 @@ footer strong {
   width: 1em;
   background: #212121;
 }
-
-.gmap_canvas {
-  margin-top: 5em;
-  margin-bottom: 7em;
-  height: 60vh;
-  width: 100%;
-}
-
-.gmap_canvas iframe {
-  height: 60vh;
-  width: 100%;
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=timeline-layout.css.map */
