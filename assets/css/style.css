@@ -20,7 +20,7 @@ nav a.nav-link {
   line-height: inherit;
 }
 
-nav .nav-item.nav-link.active {
+nav .nav-link.active {
   color: #c62828 !important;
 }
 
