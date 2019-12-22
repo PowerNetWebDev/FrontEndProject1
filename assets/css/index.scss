@@ -1,0 +1,73 @@
+// THIS STYLE IS REQUIRED BY INDEX PAGE
+
+@import 'variable';
+
+// HERO(CAROUSEL)
+section{
+  &#hero {
+    display: block;
+    margin: unset;
+    padding: unset;
+    .carousel-item img {
+      height: 100vh;
+    }
+  }
+
+  // COMPANY DESCRIPTION
+  &#bio {
+    padding-top: 4em;
+    min-height: 70vh;
+  }
+
+  // SERVICES
+  &#feat {
+    position: relative;
+    background: $lgreyColor;
+    background: linear-gradient(135deg, rgba($color: $lgreyColor, $alpha: 1) 0%, rgba(255, 255, 255, 0) 100%);
+    .separator-feat {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20vh;
+      width: 100%;
+      clip-path: ellipse(66% 68% at 65% 7%);
+      background: white;
+    }
+    div[class^="col-"] {
+      img.servIcon {
+        height: 11.25em;
+        margin: 3.25em 0;
+        width: auto;
+        filter: grayscale(100);
+        transition: all ease-in-out 0.5s;
+      }
+      &:hover {
+        img.servIcon {
+          filter: grayscale(0);
+          height: 12.5em;
+          margin: 2.625em 0;
+        }
+      }
+    }
+  }
+
+  // CLIENT
+  &#client {
+    position: relative;
+    svg{
+      position: absolute;
+      top: 60%;  
+    }
+    .card {
+      margin: 1.75em 0;
+      .card-body {
+        height: 13.625em;
+        padding: 3em 0;
+        .card-img-top {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+}
