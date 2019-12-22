@@ -12,6 +12,8 @@ p {
   line-height: 1.8em !important;
 }
 
+
+// NAVIGATION BAR
 nav {
   &#navlogo {
     width: auto;
@@ -33,6 +35,8 @@ nav {
   }
 }
 
+
+// SECTION
 section {
   min-height: 90vh;
   display: flex;
@@ -65,6 +69,8 @@ section {
   &.silver-section {
     background: url("../img/section.png");
   }
+
+  // HERO(CAROUSEL)
   &#hero {
     display: block;
     margin: unset;
@@ -73,10 +79,14 @@ section {
       height: 100vh;
     }
   }
+
+  // COMPANY DESCRIPTION
   &#bio {
     padding-top: 4em;
     min-height: 70vh;
   }
+
+  // SERVICES
   &#feat {
     position: relative;
     background: $lgreyColor;
@@ -107,6 +117,8 @@ section {
       }
     }
   }
+
+  // COMPANY STRENGTH
   &#strength {
     .strength {
       position: relative;
@@ -205,6 +217,8 @@ section {
       }
     }
   }
+
+  // CLIENT
   &#client {
     position: relative;
     svg{
@@ -225,6 +239,7 @@ section {
   }
 }
 
+// FOOTER
 footer {
   background: $darkColor;
   p {
@@ -235,12 +250,9 @@ footer {
   }
 }
 
+// OVERRIDE ANIMATE.CSS
 .animated {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.75s;
   animation-delay: 0.25s;
-}
-
-.gone {
-  opacity: 0;
 }
