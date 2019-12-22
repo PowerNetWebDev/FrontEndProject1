@@ -4,6 +4,7 @@
 }
 
 .vertical-list .list-item {
+  border-radius: 0.5em;
   margin: 1em;
   -webkit-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
@@ -17,7 +18,6 @@
 .vertical-list .list-item.active .list-body {
   position: relative;
   color: white;
-  background: #f44336;
 }
 
 .vertical-list .list-item.active .list-body .list-arrow {
@@ -27,6 +27,7 @@
 .vertical-list .list-item:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  cursor: pointer;
 }
 
 .vertical-list .list-item .list-body {
@@ -157,5 +158,31 @@
   color: #f44336;
   margin-left: 1em;
   margin-right: 1.5em;
+}
+
+.gradient .list-body {
+  position: relative;
+  background-image: white;
+  z-index: 1;
+}
+
+.gradient .list-body::before {
+  position: absolute;
+  border-radius: inherit;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f44336), to(#ff7043));
+  background-image: linear-gradient(to bottom, #f44336, #ff7043);
+  z-index: -1;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  opacity: 0;
+}
+
+.gradient .list-item.active .list-body::before {
+  opacity: 1;
 }
 /*# sourceMappingURL=software_services-layout.css.map */

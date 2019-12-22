@@ -19,10 +19,13 @@
   width: 50%;
 }
 
+.timeline .timeline-item:hover {
+  cursor: pointer;
+}
+
 .timeline .timeline-item:hover .timeline-body {
   -webkit-transform: scale(1.05) !important;
           transform: scale(1.05) !important;
-  background: #f44336;
   color: white;
 }
 
@@ -41,7 +44,6 @@
 
 .timeline .timeline-item .timeline-body {
   position: relative;
-  background: white;
   border-radius: 0.5em;
   border: 0.0625em solid rgba(33, 33, 33, 0.075);
   -webkit-box-shadow: 0 0.125em 1em 0.125em rgba(33, 33, 33, 0.1);
@@ -151,5 +153,31 @@
   height: 100%;
   width: 1em;
   background: #212121;
+}
+
+.gradient .timeline-body {
+  position: relative;
+  background-image: white;
+  z-index: 1;
+}
+
+.gradient .timeline-body::before {
+  position: absolute;
+  border-radius: inherit;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f44336), to(#ff7043));
+  background-image: linear-gradient(to bottom, #f44336, #ff7043);
+  z-index: -1;
+  -webkit-transition: opacity 0.25s linear;
+  transition: opacity 0.25s linear;
+  opacity: 0;
+}
+
+.gradient .timeline-item:hover .timeline-body::before {
+  opacity: 1;
 }
 /*# sourceMappingURL=timeline-layout.css.map */

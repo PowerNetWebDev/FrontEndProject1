@@ -18,6 +18,28 @@ a:hover {
           animation-delay: 0.25s;
 }
 
+.dropdown-menu {
+  border-radius: 0 !important;
+  border: 0.0625em solid rgba(33, 33, 33, 0.025) !important;
+}
+
+.dropdown-menu.fade {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+}
+
+.dropdown-menu .dropdown-item:active {
+  background: #f44336 !important;
+}
+
+.show > .dropdown-menu.fade {
+  pointer-events: auto;
+  opacity: 1;
+}
+
 nav#navlogo {
   width: auto;
   height: 32px;
@@ -142,10 +164,13 @@ footer strong {
   width: 50%;
 }
 
+.timeline .timeline-item:hover {
+  cursor: pointer;
+}
+
 .timeline .timeline-item:hover .timeline-body {
   -webkit-transform: scale(1.05) !important;
           transform: scale(1.05) !important;
-  background: #f44336;
   color: white;
 }
 
@@ -164,7 +189,6 @@ footer strong {
 
 .timeline .timeline-item .timeline-body {
   position: relative;
-  background: white;
   border-radius: 0.5em;
   border: 0.0625em solid rgba(33, 33, 33, 0.075);
   -webkit-box-shadow: 0 0.125em 1em 0.125em rgba(33, 33, 33, 0.1);
@@ -276,6 +300,32 @@ footer strong {
   background: #212121;
 }
 
+.gradient .timeline-body {
+  position: relative;
+  background-image: white;
+  z-index: 1;
+}
+
+.gradient .timeline-body::before {
+  position: absolute;
+  border-radius: inherit;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f44336), to(#ff7043));
+  background-image: linear-gradient(to bottom, #f44336, #ff7043);
+  z-index: -1;
+  -webkit-transition: opacity 0.25s linear;
+  transition: opacity 0.25s linear;
+  opacity: 0;
+}
+
+.gradient .timeline-item:hover .timeline-body::before {
+  opacity: 1;
+}
+
 section#hero {
   display: block;
   margin: unset;
@@ -308,7 +358,12 @@ section#feat .separator-feat {
   background: white;
 }
 
-section#feat div[class^="col-"] img.servIcon {
+section#feat div[class^="col-"] a {
+  color: #f44336;
+  text-decoration: none;
+}
+
+section#feat div[class^="col-"] a img.servIcon {
   height: 11.25em;
   margin: 3.25em 0;
   width: auto;
@@ -318,9 +373,9 @@ section#feat div[class^="col-"] img.servIcon {
   transition: all ease-in-out 0.5s;
 }
 
-section#feat div[class^="col-"]:hover img.servIcon {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
+section#feat div[class^="col-"] a:hover img.servIcon {
+  -webkit-filter: grayscale(0) contrast(1.5) brightness(0.9);
+          filter: grayscale(0) contrast(1.5) brightness(0.9);
   height: 12.5em;
   margin: 2.625em 0;
 }
@@ -335,7 +390,19 @@ section#client svg {
 }
 
 section#client .card {
-  margin: 1.75em 0;
+  margin: 1.75em 1em;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+section#client .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  border-color: rgba(255, 112, 67, 0.5);
+}
+
+section#client .card:hover .card-body {
+  background: rgba(244, 67, 54, 0.025);
 }
 
 section#client .card .card-body {

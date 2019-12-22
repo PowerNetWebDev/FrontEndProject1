@@ -36,18 +36,22 @@ section {
       background: white;
     }
     div[class^="col-"] {
-      img.servIcon {
-        height: 11.25em;
-        margin: 3.25em 0;
-        width: auto;
-        filter: grayscale(100);
-        transition: all ease-in-out 0.5s;
-      }
-      &:hover {
+      a{
+        color: $primColor;
+        text-decoration: none;
         img.servIcon {
-          filter: grayscale(0);
-          height: 12.5em;
-          margin: 2.625em 0;
+          height: 11.25em;
+          margin: 3.25em 0;
+          width: auto;
+          filter: grayscale(100);
+          transition: all ease-in-out 0.5s;
+        }
+        &:hover {
+          img.servIcon {
+            filter: grayscale(0) contrast(1.5) brightness(0.9);
+            height: 12.5em;
+            margin: 2.625em 0;
+          }
         }
       }
     }
@@ -61,7 +65,15 @@ section {
       top: 60%;
     }
     .card {
-      margin: 1.75em 0;
+      margin: 1.75em 1em;
+      transition: all 0.25s ease-in-out;
+      &:hover{
+        transform: scale(1.05);
+        border-color: rgba($color: $primColorAlt, $alpha: 0.5);
+        .card-body{
+          background: rgba($color: $primColor, $alpha: 0.025);
+        }
+      }
       .card-body {
         height: 13.625em;
         padding: 3em 0;

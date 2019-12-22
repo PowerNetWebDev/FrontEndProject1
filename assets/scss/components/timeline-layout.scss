@@ -18,9 +18,10 @@
     list-style: none;
     width: 50%;
     &:hover {
+      cursor: pointer;
       .timeline-body {
         transform: scale(1.05) !important;
-        background: $primColor;
+        // background: $primColor;
         color: white;
         .timeline-img {
           filter: invert(100%) brightness(300%);
@@ -35,7 +36,7 @@
     }
     .timeline-body {
       position: relative;
-      background: white;
+      // background: white;
       border-radius: 0.5em;
       border: 0.0625em solid rgba($color: $darkColor, $alpha: 0.075);
       box-shadow: 0 0.125em 1em 0.125em rgba($color: $darkColor, $alpha: 0.1);
@@ -119,4 +120,29 @@
     width: 1em;
     background: $darkColor;
   }
+}
+
+
+// GRADIENT HOVER
+.gradient .timeline-body {
+  position: relative;
+  background-image: white;
+  z-index: 1;
+}
+.gradient .timeline-body::before {
+  position: absolute;
+  border-radius: inherit;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, $primColor, $primColorAlt);
+  z-index: -1;
+  transition: opacity 0.25s linear;
+  opacity: 0;
+}
+
+.gradient .timeline-item:hover .timeline-body::before {
+  opacity: 1;
 }

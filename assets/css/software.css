@@ -19,6 +19,28 @@ a:hover {
           animation-delay: 0.25s;
 }
 
+.dropdown-menu {
+  border-radius: 0 !important;
+  border: 0.0625em solid rgba(33, 33, 33, 0.025) !important;
+}
+
+.dropdown-menu.fade {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+}
+
+.dropdown-menu .dropdown-item:active {
+  background: #f44336 !important;
+}
+
+.show > .dropdown-menu.fade {
+  pointer-events: auto;
+  opacity: 1;
+}
+
 nav#navlogo {
   width: auto;
   height: 32px;
@@ -127,6 +149,7 @@ footer strong {
 }
 
 .vertical-list .list-item {
+  border-radius: 0.5em;
   margin: 1em;
   -webkit-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
@@ -140,7 +163,6 @@ footer strong {
 .vertical-list .list-item.active .list-body {
   position: relative;
   color: white;
-  background: #f44336;
 }
 
 .vertical-list .list-item.active .list-body .list-arrow {
@@ -150,6 +172,7 @@ footer strong {
 .vertical-list .list-item:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  cursor: pointer;
 }
 
 .vertical-list .list-item .list-body {
@@ -282,6 +305,37 @@ footer strong {
   margin-right: 1.5em;
 }
 
+.gradient .list-body {
+  position: relative;
+  background-image: white;
+  z-index: 1;
+}
+
+.gradient .list-body::before {
+  position: absolute;
+  border-radius: inherit;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f44336), to(#ff7043));
+  background-image: linear-gradient(to bottom, #f44336, #ff7043);
+  z-index: -1;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  opacity: 0;
+}
+
+.gradient .list-item.active .list-body::before {
+  opacity: 1;
+}
+
+section .section-title {
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
 section#hero {
   background: url("../img/software/hero.png");
   background-position-x: center;
@@ -301,7 +355,7 @@ section#hero .container {
 }
 
 section#hero .container #hero-title {
-  color: #ff5722;
+  color: #f44336;
   text-align: center;
   font-weight: 600;
   width: -webkit-fit-content;
@@ -320,12 +374,105 @@ section#hero .container #hero-more {
   width: fit-content;
   padding: 0.5em 1em;
   text-align: center;
-  color: #ff5722;
-  border: 1px solid #ff5722;
+  color: #f44336;
+  border: 1px solid #f44336;
   border-radius: 0.2em;
 }
 
+section#whyus {
+  position: relative;
+}
+
+section#whyus svg {
+  position: absolute;
+  top: 60%;
+}
+
+section#whyus .whyus-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: unset;
+  padding: unset;
+}
+
+section#whyus .whyus-list .list-item {
+  margin-top: 2.5em;
+  width: 20%;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+section#whyus .whyus-list .list-item:hover {
+  color: #f44336;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+}
+
+section#whyus .whyus-list .list-item .list-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.5em;
+  background: white;
+  margin: 0 0.5em;
+  padding: 2em 1em;
+  height: 100%;
+  border: 0.0625em solid rgba(33, 33, 33, 0.075);
+  -webkit-box-shadow: 0 0.125em 1em 0.125em rgba(33, 33, 33, 0.1);
+          box-shadow: 0 0.125em 1em 0.125em rgba(33, 33, 33, 0.1);
+}
+
+section#whyus .whyus-list .list-item .list-body img {
+  height: 7em;
+}
+
+section#whyus .whyus-list .list-item .list-body p {
+  text-align: center;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  margin: 0;
+}
+
+section#how {
+  position: relative;
+  background: url("../img/software/how1.png");
+  background-repeat: no-repeat;
+  background-position-y: 10em;
+  background-position-x: center;
+  background-size: 50%;
+}
+
+section#how .section-title {
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+}
+
 .title-underline {
-  background: #ff5722 !important;
+  background: #f44336 !important;
+}
+
+.whyus-list.gradient .list-item:hover .list-body::before {
+  opacity: 1;
 }
 /*# sourceMappingURL=software.css.map */

@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../../FrontEnd-PowerNET/assets/scss/components/variable.scss"
+        "../scss/components/variable.scss"
     ],
     "names": [],
     "file": "variable.css"
