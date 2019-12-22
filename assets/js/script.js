@@ -16,10 +16,13 @@ isScrolled = (el, funcWhile) => {
     scrollBot = $(window).scrollTop() + $(window).height();
     notAnimated = !($(el).hasClass('animated'));
     if (notAnimated) {
+        el.css({'opacity': '0'});
         if (scrollBot > elTop && scrollTop < elTop) {
+            el.css({'opacity': '1'});
             funcWhile();
         }
         if (scrollTop > elTop) {
+            el.css({'opacity': '1'});
             $(section).addClass('animated');
         }
     }
