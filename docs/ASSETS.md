@@ -27,7 +27,7 @@ Berisi komponen-komponen kecil yang digunakan file scss utama pada folder parent
 
 
 # Javascript
-Setiap script yang dibuat sementara ini disimpan dalam folder /assets/js/ bersamaan dengan script lain yang didapat dari vendor tertentu
+Setiap script yang dibuat sementara ini disimpan dalam folder **/assets/js/** bersamaan dengan vendor script
 
 
 # Images
