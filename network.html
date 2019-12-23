@@ -2,14 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/css/network.css">
     <title>PowerNET</title>
 </head>
 
 <body>
+    <!-- NAVBAR -->
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light">
             <div class="container">
@@ -24,11 +27,11 @@
                     <div class="nav navbar-nav navbar-right">
                         <a href="index.html" class="nav-item nav-link">HOME</a>
                         <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 PRODUCTS
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <div class="dropdown-menu fade" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="network.html">NETWORKING</a>
                                 <a class="dropdown-item" href="software.html">SOFTWARE</a>
                             </div>
@@ -40,151 +43,175 @@
             </div>
         </nav>
     </header>
+
+    <!-- HERO -->
     <section id="hero">
-        <div class="fluid-container">
-            <div id="main-image-network">
-                <img src="./assets/img/main-image-network.png">
+        <div class="container">
+            <h1 id="hero-title">NETWORKING</h1>
+            <p id="hero-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, et officia ex consequatur nesciunt, ullam est deleniti quidem eius non facere dolorum! Culpa ab quo unde mollitia aut placeat odit?</p>
+            <a id="hero-more">LEARN MORE</a>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="titled-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-body">
+                    <h2 class="title-text">SERVICES</h2>
+                    <span class="title-underline"></span>
+                </div>
+            </div>
+            <p class="text-center">Our core of business focuses on Internet Services that deliver a total solution for companies, especially companies that cover wide geographical area and have the needs to better their communication system whether it is data, voice, or video through the Internet or the Company's Intranet/Internet. There are some service</p>
+        </div>
+    </section>
+
+    <!-- SECURITY ADVISORY SERVICES -->
+    <section id="services-advisory" class="imaged-section titled-section">
+        <div class="img-overlay left">
+            <img src="./assets/img/network/services/Path 24.png" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-6">
+                    <div class="section-title">
+                        <div class="title-body">
+                            <h4 class="title-text title-small">Security Advisory Services</h4>
+                            <span class="title-underline"></span>
+                        </div>
+                    </div>
+                    <p>Expert security advice helps you make better business decisions.POWER NET has technical security specialist who take their jobs,and your information assets very seriously</p>
+                </div>
             </div>
         </div>
     </section>
-    <div class="container">
-        <div class="text-center" id="main-desc-network">
-            <div class="row align-items-center h-100">
-                <div class=" mx-auto">
-                    <div class="h-100 justify-content-center">
-                        <div>
-                            <h3>N E T W O R K I N G</h3>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
-                                dolores praesentium vitae, eaque
-                                recusandae soluta iure quas, omnis velit nostrum excepturi quo, neque error ducimus
-                                reiciendis
-                                sit minima maxime a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-                                aperiam
-                                consequuntur quisquam, id at ipsa perferendis neque maiores distinctio numquam, sed
-                                blanditiis
-                                culpa suscipit doloribus impedit quas ipsam, vel placeat. lorem
-                            </p>
+
+    <!-- SECURITY SERVICES -->
+    <section id="sec-services" class="titled-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-body">
+                    <h3 class="title-text title-small">Security Services</h3>
+                    <span class="title-underline"></span>
+                </div>
+            </div>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit repellat,
+                eligendi quae, libero cum asperiores quaerat doloribus recusandae animi obcaecati beatae corporis porro
+                voluptatibus eius amet hic vero rem sunt!</p>
+            <ul class="secservices-list">
+                <li class="list-item">
+                    <div class="list-body">
+                        <img src="./assets/img/network/services/network-security-for-businesses.png" alt="">
+                        <p>Security Service Pack</p>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <div class="list-body">
+                        <img src="./assets/img/network/services/Image 25.png" alt="">
+                        <p>Security Planning</p>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <div class="list-body">
+                        <img src="./assets/img/network/services/73-512.png" alt="">
+                        <p>Security Application Security</p>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <div class="list-body">
+                        <img src="./assets/img/network/services/j-25-512.png" alt="">
+                        <p>Security Security Audits</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SECURITY ADVISORY SERVICES -->
+    <section id="services-advisory2" class="imaged-section titled-section">
+        <div class="img-overlay right">
+            <img src="./assets/img/network/services/Path 25.png" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="section-title">
+                        <div class="title-body">
+                            <h4 class="title-text title-small">Security Advisory Services</h4>
+                            <span class="title-underline"></span>
                         </div>
                     </div>
+                    <p>Expert security advice helps you make better business decisions.POWER NET has technical security specialist who take their jobs,and your information assets very seriously</p>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="offset-md-1 col-md-5">
-                <img src="./assets/img/img1.png" width="100%" height="100%">
-            </div>
-            <div class="col-md-5">
-                <h5 class="mt-2">Server Security</h5>
-                <p>POWERNET Managed Server™ Service brings your business to the Web quickly, efficiently,
-                    seamlessly, and reliably - and lets you get back to doing what you do best.
+    </section>
 
-                    POWERNET Managed Server™ gives you all of the resources you need, in one convenient package. The
-                    space and connectivity, monitoring and management, technical expertise, security, scalability,
-                    and, of course, the support and performance required by your mission-critical Web and Mail
-                    operations. All from an experienced company in complex Web and Mail Services.
+    <!-- PRODUCT LIST -->
+    <section id="product-list" class="titled-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-body">
+                    <h4 class="title-text title-small">Product List</h4>
+                    <span class="title-underline"></span>
+                </div>
+            </div>
+            <p class="text-center pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reprehenderit nam ab iste, quo magni neque sint at nesciunt nobis aspernatur asperiores consequatur aliquid illum reiciendis et minus eos nostrum?</p>
+            <div class="row mt-5">
+                <div class="col-md-2 text-center">
+                    <img src="./assets/img/network/services/powermailthumb.png" alt="">                    
+                </div>
+                <div class="col-md-10">
+                    <p>PowerMail dotQmail allows you to access your mails from wherever you may be, be it from your office lap-top, or your home PC or even when you are at a public booth in an Internet Cafe. Your mails will be kept centrally in the server, in which will give you the privilege of accessing the same mail from various spots. PowerMail dotQmail has been in use in various different forms since 1997, and has benefited from years of modifications, tuning, and additions.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                    <div class="col-md-2 text-center">
+                    <img src="./assets/img/network/services/powermailthumb-1.png" alt="">                    
+                </div>
+                <div class="col-md-10">
+                    <p>Linux is also in need of anti-virus protection. Firstly, new viruses for Linux appear every day. It is very important to protect your network before these potentially destructive viruses infect and disorder your network. Secondly, there are viruses for other operating systems that may pass through computers running Linux and infect other parts of your corporate network (e.g. your workstations running Windows).</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                    <div class="col-md-2 text-center">
+                    <img src="./assets/img/network/services/billingsystem.png" alt="">                    
+                </div>
+                <div class="col-md-10">
+                    <p>The system is running under Linux with Postgresql Database and with Radius Server. This product is extremely recommended for ISP business. The function are: Pre and Post Paid Payment System, User and Group Management, Login Monitoring and Report System for end user and management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    Built on a foundation of best-of-breed infrastructure components and POWERNET Open Source
-                    technology, POWERNET Managed Server™ service is the industry's most robust business-critical
-                    solution for companies that want to completely outsource their Internet operations.
-                </p>
-            </div>
-        </div>
-        <div class="row mt-5">
-            <div class="offset-md-1 col-md-5">
-                <h5 class="mt-2">Security Advisory Services</h5>
-                <p>
-                    Expert security advice helps you make better business decisions. POWERNET has technical security
-                    specialists who take their jobs, and your information assets, very seriously. Depend on POWERNET
-                    for regulation compliance, security consulting and intelligence provisioning as well as
-                    execution and management of customized solutions.
-
-                    Security Planning - create a customized security plan
-                    Security Service Pack - comprehensive all-in-one packages that help address your evolving
-                    security concerns
-                    Application Security Services - secure your custom applicatio
-                    Security Audits - find out exactly what you need to protect your assets
-
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quaerat ab maxime eveniet provident
-                    voluptatum! Dolores, atque accusamus, perferendis, inventore aperiam doloribus consequatur
-                    similique amet tempore ipsa quaerat possimus numquam!</p>
-            </div>
-            <div class="col-md-5">
-                <img src="./assets/img/img2.png" width="100%" height="100%">
-            </div>
-        </div>
-        <div class="row align-items-center text-center h-100  my-5">
-            <div class=" mx-auto">
-                <div class="h-100 justify-content-center">
-                    <div>
-                        <h5>Security Service</h5>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
-                            dolores praesentium vitae, eaque
-                            recusandae soluta iure quas, omnis velit nostrum excepturi quo, neque error ducimus
-                            reiciendis
-                            sit minima maxime a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aperiam
-                            consequuntur quisquam, id at ipsa perferendis neque maiores distinctio numquam, sed
-                            blanditiis
-                            culpa suscipit doloribus impedit quas ipsam, vel placeat. lorem
-                        </p>
-                    </div>
+    <!-- FOOTER -->
+    <footer class="page-footer font-small text-light pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <img src="./assets/img/logo.png" alt="Powernet" class="mb-4">
+                    <p>
+                        We're one of the growing worldwide information technology (IT) consulting and solutions provider
+                        for Asian business and governments.
+                    </p>
+                    <p>Copyrights © 2019. All rights reserved to PowerNet.</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h4 class="mb-4"><strong>GET IN TOUCH</strong></h4>
+                    <p>Phone Number : (+62-21) 5289-1910, (+62-21) 37-111-567</p>
+                    <p>Our Fax Number : Indonesia (+62-21) 5299-4599, USA (1) 443-639-2514</p>
+                    <p>If you want to save your cost by send us some FAX to USA number, you can send us an email with
+                        attachment (form to be fax), to faxus@indosolution.com.The attachment will be deliver to our fax
+                        machine.</p>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="offset-md-1 col-md-5">
-                <div class="row mb-5">
-                    <div class="col-3">
-                        <img src="assets/img/product.gif">
-                    </div>
-                    <div class="col-9">
-                        <p>PowerMail dotQmail allows you to access your mails from wherever you may be, be it from your
-                            office lap-top, or your home PC or even when you are at a public booth Cafe. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5">
-                <div class="row mb-5">
-                    <div class="col-3">
-                        <img src="assets/img/product.gif">
-                    </div>
-                    <div class="col-9">
-                        <p>PowerMail dotQmail allows you to access your mails from wherever you may be, be it from your
-                            office lap-top, or your home PC or even when you are at a public booth Cafe. </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="offset-md-1 col-md-5">
-                <div class="row mb-5">
-                    <div class="col-3">
-                        <img src="assets/img/product.gif">
-                    </div>
-                    <div class="col-9">
-                        <p>PowerMail dotQmail allows you to access your mails from wherever you may be, be it from your
-                            office lap-top, or your home PC or even when you are at a public booth Cafe. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5">
-                <div class="row mb-5">
-                    <div class="col-3">
-                        <img src="assets/img/product.gif">
-                    </div>
-                    <div class="col-9">
-                        <p>PowerMail dotQmail allows you to access your mails from wherever you may be, be it from your
-                            office lap-top, or your home PC or even when you are at a public booth Cafe. </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </footer>
     <script src="./assets/js/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/network.js"></script>
 </body>
 
 </html>

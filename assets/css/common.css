@@ -95,6 +95,8 @@ section.titled-section .section-title {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1.5em 0;
+  margin-top: 1em;
+  margin-bottom: 3em;
 }
 
 section.titled-section .section-title .title-body {
@@ -118,17 +120,60 @@ section.titled-section .section-title .title-body .title-text {
   font-weight: 500;
   text-indent: 0.5em;
   letter-spacing: 0.5em;
-  color: #555555;
+  color: #757575;
   padding: 0.25em 0.5em;
   text-align: center;
+}
+
+section.titled-section .section-title .title-body .title-text.title-small {
+  text-indent: 0;
+  letter-spacing: 0;
 }
 
 section.titled-section .section-title .title-body .title-underline {
   display: block;
   height: 0.2em;
   width: 60%;
-  margin-top: 0.5em;
   background: #f44336;
+}
+
+section.imaged-section {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-top: 3em;
+  padding-bottom: 5em;
+  position: relative;
+  background: #f5f5f5;
+  min-height: unset;
+}
+
+section.imaged-section .img-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+
+section.imaged-section .img-overlay img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+section.imaged-section .img-overlay.left {
+  left: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+section.imaged-section .img-overlay.right {
+  right: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
 }
 
 footer {

@@ -24,17 +24,17 @@ a {
 }
 
 // OVERRIDE BOOTSTRAP.CSS
-.dropdown-menu{
+.dropdown-menu {
   border-radius: 0 !important;
   border: 0.0625em solid rgba($color: $darkColor, $alpha: 0.025) !important;
-  &.fade{
+  &.fade {
     display: block;
     opacity: 0;
     pointer-events: none;
     transition: all ease-in-out 0.25s;
   }
-  .dropdown-item{
-    &:active{
+  .dropdown-item {
+    &:active {
       background: $primColor !important;
     }
   }
@@ -79,13 +79,17 @@ section {
     font-weight: 300;
     line-height: 1.5em;
   }
+  
+  // SECTION WITH TITLE
   &.titled-section {
     padding-top: 2.4em;
     padding-bottom: 6.4em;
     .section-title {
       display: flex;
       justify-content: center;
-      padding: 1.5em 0;
+      padding: 1.5em 0;      
+      margin-top: 1em;
+      margin-bottom: 3em;
       .title-body {
         width: fit-content;
         display: flex;
@@ -96,20 +100,57 @@ section {
           font-weight: 500;
           text-indent: 0.5em;
           letter-spacing: 0.5em;
-          color: #555555;
+          color: $darkGreyColor;
           padding: 0.25em 0.5em;
           text-align: center;
+          &.title-small {
+            text-indent: 0;
+            letter-spacing: 0;
+          }
         }
         .title-underline {
           display: block;
           height: 0.2em;
           width: 60%;
-          margin-top: 0.5em;
           background: $primColor;
         }
       }
     }
   }
+
+  // SECTION WITH IMAGE ON LEFT/RIGHT
+  &.imaged-section{
+    margin-top: 2em;
+    margin-bottom: 2em;;
+    padding-top: 3em;
+    padding-bottom: 5em;
+    position: relative;
+    background: $lgreyColor;
+    min-height: unset;
+    // box-shadow: 0 0 1em rgba($color: $darkColor, $alpha: 0.2);
+    .img-overlay{
+      position: absolute;
+      top: 0;
+      height: 100%;      
+      width: percentage($number: 6/12);      
+      overflow: hidden;
+      img{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 50%;  
+        transform: translateY(-50%);
+      }
+      &.left{
+        left: 0;
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+      }
+      &.right{
+        right: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+      }
+    }
+  }  
 }
 
 // FOOTER

@@ -20,8 +20,7 @@
     &:hover {
       cursor: pointer;
       .timeline-body {
-        transform: scale(1.05) !important;
-        // background: $primColor;
+        transform: scale(1.05) !important;        
         color: white;
         .timeline-img {
           filter: invert(100%) brightness(300%);
@@ -38,8 +37,8 @@
       position: relative;
       // background: white;
       border-radius: 0.5em;
-      border: 0.0625em solid rgba($color: $darkColor, $alpha: 0.075);
-      box-shadow: 0 0.125em 1em 0.125em rgba($color: $darkColor, $alpha: 0.1);
+      border: $primBorder;
+      box-shadow: $primShadow;
       transition: all ease-in-out 0.25s;
       .timeline-img {
         display: flex;
@@ -62,8 +61,10 @@
       width: 1.5em;
       height: 1.5em;
       background: white;
-      border: 0.0625em solid rgba($color: $darkColor, $alpha: 0.075);
-      clip-path: polygon(0 0, 100% 0, 100% 100%);
+      box-shadow: $primShadow;
+      border: $primBorder;
+      border-color: rgba($color: $darkColor, $alpha: 0.2);
+      clip-path: polygon(0 0, 0 100%, 100% 100%);
       transition: all ease-in-out 0.25s;
     }
     .timeline-dot {
@@ -72,7 +73,7 @@
       width: 1em;
       height: 1em;
       border-radius: 2em;
-      border: 0.0625em solid rgba($color: $darkColor, $alpha: 0.075);
+      border: $primBorder;
       background: $lgreyColor;
       transition: all ease-in-out 0.25s;
     }
@@ -84,10 +85,10 @@
         margin-right: 3em;
       }
       .timeline-img {
-        border-right: 0.1em solid rgba($color: $darkColor, $alpha: 0.125);
+        border-right: $primBorder;
       }
       .timeline-arrow {
-        transform: rotate(45deg);
+        transform: rotate(225deg);
         right: -0.73em;
       }
       .timeline-dot {
@@ -103,10 +104,10 @@
         margin-left: 3em;
       }
       .timeline-img {
-        border-left: 0.1em solid rgba($color: $darkColor, $alpha: 0.125);
+        border-left: $primBorder;
       }
       .timeline-arrow {
-        transform: rotate(225deg);
+        transform: rotate(45deg);
         left: -0.73em;
       }
       .timeline-dot {

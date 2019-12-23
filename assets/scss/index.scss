@@ -11,7 +11,7 @@ section {
     margin: unset;
     padding: unset;
     .carousel-item img {
-      height: 100vh;
+      height: 90vh;
     }
   }
 
@@ -35,7 +35,7 @@ section {
       clip-path: ellipse(66% 68% at 65% 7%);
       background: white;
     }
-    div[class^="col-"] {
+    div[class^=col-] {
       a{
         color: $primColor;
         text-decoration: none;
@@ -44,7 +44,7 @@ section {
           margin: 3.25em 0;
           width: auto;
           filter: grayscale(100);
-          transition: all ease-in-out 0.5s;
+          transition: all ease-in-out 0.25s;
         }
         &:hover {
           img.servIcon {
@@ -67,14 +67,17 @@ section {
     .card {
       margin: 1.75em 1em;
       transition: all 0.25s ease-in-out;
+      border: $primBorder;
+      box-shadow: $primShadow;
       &:hover{
         transform: scale(1.05);
-        border-color: rgba($color: $primColorAlt, $alpha: 0.5);
+        border-color: rgba($color: $primColorAlt, $alpha: 0.2);
         .card-body{
-          background: rgba($color: $primColor, $alpha: 0.025);
+          background: rgba($color: $primColor, $alpha: 0.025)
         }
       }
       .card-body {
+        transition: all 0.25s ease-in-out;
         height: 13.625em;
         padding: 3em 0;
         .card-img-top {

@@ -45,9 +45,9 @@
 .timeline .timeline-item .timeline-body {
   position: relative;
   border-radius: 0.5em;
-  border: 0.0625em solid rgba(33, 33, 33, 0.075);
-  -webkit-box-shadow: 0 0.125em 1em 0.125em rgba(33, 33, 33, 0.1);
-          box-shadow: 0 0.125em 1em 0.125em rgba(33, 33, 33, 0.1);
+  border: 0.0625em solid rgba(33, 33, 33, 0.1);
+  -webkit-box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
+          box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
   -webkit-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
 }
@@ -82,9 +82,12 @@
   width: 1.5em;
   height: 1.5em;
   background: white;
-  border: 0.0625em solid rgba(33, 33, 33, 0.075);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%);
+  -webkit-box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
+          box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
+  border: 0.0625em solid rgba(33, 33, 33, 0.1);
+  border-color: rgba(33, 33, 33, 0.2);
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
+          clip-path: polygon(0 0, 0 100%, 100% 100%);
   -webkit-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
 }
@@ -95,7 +98,7 @@
   width: 1em;
   height: 1em;
   border-radius: 2em;
-  border: 0.0625em solid rgba(33, 33, 33, 0.075);
+  border: 0.0625em solid rgba(33, 33, 33, 0.1);
   background: #f5f5f5;
   -webkit-transition: all ease-in-out 0.25s;
   transition: all ease-in-out 0.25s;
@@ -111,12 +114,12 @@
 }
 
 .timeline .timeline-item:nth-child(odd) .timeline-img {
-  border-right: 0.1em solid rgba(33, 33, 33, 0.125);
+  border-right: 0.0625em solid rgba(33, 33, 33, 0.1);
 }
 
 .timeline .timeline-item:nth-child(odd) .timeline-arrow {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
   right: -0.73em;
 }
 
@@ -135,12 +138,12 @@
 }
 
 .timeline .timeline-item:nth-child(even) .timeline-img {
-  border-left: 0.1em solid rgba(33, 33, 33, 0.125);
+  border-left: 0.0625em solid rgba(33, 33, 33, 0.1);
 }
 
 .timeline .timeline-item:nth-child(even) .timeline-arrow {
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   left: -0.73em;
 }
 

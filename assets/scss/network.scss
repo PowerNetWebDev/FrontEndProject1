@@ -3,10 +3,10 @@
 @import "./components/software_services-layout";
 
 section {  
-
+  
   // HERO
   &#hero {
-    background: url("../img/software/hero.png");
+    background: url("../img/network/hero.png");
     background-position-x: center;
     .container {
       display: flex;
@@ -33,15 +33,15 @@ section {
     }
   }
 
-  // WHY US
-  &#whyus{
-    position: relative;
-    svg {
-      z-index: -1;
-      position: absolute;
-      top: 60%;
-    }
-    .whyus-list{
+  // SERVICES
+  &#services{
+    padding-top: 6em;
+    min-height: unset;
+  }
+
+  // SECURITY SERVICES
+  &#sec-services{
+    .secservices-list{
       display: flex;
       list-style: none;
       flex-direction: row;
@@ -49,12 +49,11 @@ section {
       padding: unset;
       .list-item{
         margin-top: 2.5em;
-        width: percentage($number: 1/5);
+        width: percentage($number: 1/4);
         transition: all 0.25s ease-in-out;        
-        &:hover{
-          color: $primColor;          
+        &:hover{          
           transform: scale(1.05);
-          cursor: pointer;          
+          cursor: pointer;       
           .list-body{
             border-color: rgba($color: $primColorAlt, $alpha: 0.2);
           }   
@@ -65,45 +64,37 @@ section {
           align-items: center;
           border-radius: 0.5em;
           background: white;
-          background-image: url('../img/network/services/Rectangle\ 39.png');
+          background-image: url('../img/network/services/Rectangle 39.png');
           background-size: cover;
-          margin: 0 0.5em;
-          padding: 4em 0.25em 2em 0.25em;
+          background-position-x: center;
+          background-position-y: center;
+          margin: 0 1em;
+          padding: 4em 1em 2em 1em;
           height: 100%;
           border: 0.0625em solid rgba($color: $darkColor, $alpha: 0.075);
           box-shadow: $primShadow;
           img{
-            transition: all 0.25s ease-in-out;        
-            filter: contrast(1.15);
-            height: 6em;
+            height: 10em;
           }
           p{
-            padding-top: 1em;
+            padding-top: 0.5em;
             text-align: center;
             transition: all 0.25s ease-in-out;
             margin: 0;
             font-weight: 400;
             color: $darkGreyColor;
-            font-size: 1.1em !important;
           }
         }
       }
     }
   }
 
-  // HOW WE WORK
-  &#how{
-    position: relative;
-    .section-title{
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
-      position: absolute;
+  // PRODUCT LIST
+  &#product-list{
+    div[class^=col-]{
+      img{
+        width: 80%;
+      }
     }
-    background: url('../img/software/how1.png');
-    background-repeat: no-repeat;
-    background-position-y: 6em;
-    background-position-x: center;
-    background-size: 60%;
   }
 }
