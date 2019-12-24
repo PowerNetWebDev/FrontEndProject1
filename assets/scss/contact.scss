@@ -1,0 +1,58 @@
+@import "./components/variable";
+@import "./components/common";
+@import "./components/software_services-layout";
+
+section {  
+  
+  // HERO
+  &#hero {
+    background: url("../img/contact/Rectangle 44.png");
+    background-size: auto;
+    background-position-y: -1em;
+    background-position-x: center;    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      #hero-title {
+        color: $primColor;
+        text-align: center;
+        font-weight: 600;
+        width: fit-content;
+        text-shadow: 2px 2px 2px rgba($color: $darkColor, $alpha: 0.5);
+      }
+      #hero-text {
+        text-align: center;
+      }
+      #hero-more {
+        width: fit-content;
+        padding: 0.5em 1em;
+        text-align: center;
+        color: $primColor;
+        border: 1px solid $primColor;
+        border-radius: 0.2em;
+      }
+    }
+  }
+  &#contact{
+    .section-title{
+      margin-top: 1.25em;
+      margin-bottom: 1em;
+      padding: unset;
+      .title-text{
+        padding: 0.25em 0;
+        margin: unset;
+      }
+    }
+  }
+  .contact-detail{
+    height: 3em;
+    p{
+      margin: unset;
+      letter-spacing: 0.1em;      
+    }
+  }
+
+  // LOCATION
+  
+}

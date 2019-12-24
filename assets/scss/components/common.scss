@@ -163,3 +163,15 @@ footer {
     border-bottom: 0.1em solid $primColor;
   }
 }
+
+// GOOGLE MAP EMBED
+.gmap_canvas {
+  margin-top: 5em;
+  margin-bottom: 7em;
+  height: 60vh;
+  width: 100%;
+  iframe {
+    height: 60vh;
+    width: 100%;
+  }
+}

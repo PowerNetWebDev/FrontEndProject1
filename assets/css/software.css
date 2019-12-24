@@ -189,6 +189,18 @@ footer strong {
   border-bottom: 0.1em solid #f44336;
 }
 
+.gmap_canvas {
+  margin-top: 5em;
+  margin-bottom: 7em;
+  height: 60vh;
+  width: 100%;
+}
+
+.gmap_canvas iframe {
+  height: 60vh;
+  width: 100%;
+}
+
 .vertical-list {
   list-style: none;
 }
