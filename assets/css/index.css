@@ -411,12 +411,12 @@ section#feat .separator-feat {
   background: white;
 }
 
-section#feat div[class^=col-] a {
+section#feat div[class^="col-"] a {
   color: #f44336;
   text-decoration: none;
 }
 
-section#feat div[class^=col-] a img.servIcon {
+section#feat div[class^="col-"] a img.servIcon {
   height: 11.25em;
   margin: 3.25em 0;
   width: auto;
@@ -426,7 +426,7 @@ section#feat div[class^=col-] a img.servIcon {
   transition: all ease-in-out 0.25s;
 }
 
-section#feat div[class^=col-] a:hover img.servIcon {
+section#feat div[class^="col-"] a:hover img.servIcon {
   -webkit-filter: grayscale(0) contrast(1.5) brightness(0.9);
           filter: grayscale(0) contrast(1.5) brightness(0.9);
   height: 12.5em;
@@ -464,12 +464,29 @@ section#client .card:hover .card-body {
 section#client .card .card-body {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  height: 13.625em;
-  padding: 3em 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 section#client .card .card-body .card-img-top {
-  height: 100%;
-  width: auto;
+  width: 80%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .card-img-top {
+    width: auto;
+    height: 80%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

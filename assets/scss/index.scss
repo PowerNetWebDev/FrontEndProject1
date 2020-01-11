@@ -35,8 +35,8 @@ section {
       clip-path: ellipse(66% 68% at 65% 7%);
       background: white;
     }
-    div[class^=col-] {
-      a{
+    div[class^="col-"] {
+      a {
         color: $primColor;
         text-decoration: none;
         img.servIcon {
@@ -69,22 +69,30 @@ section {
       transition: all 0.25s ease-in-out;
       border: $primBorder;
       box-shadow: $primShadow;
-      &:hover{
+      &:hover {
         transform: scale(1.05);
         border-color: rgba($color: $primColorAlt, $alpha: 0.2);
-        .card-body{
-          background: rgba($color: $primColor, $alpha: 0.025)
+        .card-body {
+          background: rgba($color: $primColor, $alpha: 0.025);
         }
       }
       .card-body {
         transition: all 0.25s ease-in-out;
-        height: 13.625em;
-        padding: 3em 0;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .card-img-top {
-          height: 100%;
-          width: auto;
+          width: 80%;
+          height: auto;          
         }
       }
     }
+  }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {  
+  .card-img-top {
+    width: auto;
+    height: 80%;
   }
 }
