@@ -26,25 +26,13 @@ a {
 // OVERRIDE BOOTSTRAP.CSS
 .dropdown-menu {
   border-radius: 0 !important;
-  border: 0.0625em solid rgba($color: $darkColor, $alpha: 0.025) !important;
-  &.fade {
-    display: block;
-    opacity: 0;
-    pointer-events: none;
-    transition: all ease-in-out 0.25s;
-  }
+  border: 0.0625em solid rgba($color: $darkColor, $alpha: 0.025) !important;  
   .dropdown-item {
     &:active {
       background: $primColor !important;
     }
   }
 }
-
-.show > .dropdown-menu.fade {
-  pointer-events: auto;
-  opacity: 1;
-}
-
 // NAVIGATION BAR
 nav {
   &#navlogo {

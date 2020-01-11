@@ -23,21 +23,8 @@ a:hover {
   border: 0.0625em solid rgba(33, 33, 33, 0.025) !important;
 }
 
-.dropdown-menu.fade {
-  display: block;
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: all ease-in-out 0.25s;
-  transition: all ease-in-out 0.25s;
-}
-
 .dropdown-menu .dropdown-item:active {
   background: #f44336 !important;
-}
-
-.show > .dropdown-menu.fade {
-  pointer-events: auto;
-  opacity: 1;
 }
 
 nav#navlogo {
