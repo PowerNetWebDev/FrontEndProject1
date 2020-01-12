@@ -2,19 +2,27 @@
 @import "./components/common";
 @import "./components/software_services-layout";
 
+html {
+  font-size: 14px !important;
+}
+nav{
+  background: white !important;
+}
 section {  
+  min-height: 55vh !important;
   
   // HERO
   &#hero {
-    background: url("../img/contact/Rectangle 44.png");
-    background-size: auto;
-    background-position-y: -1em;
-    background-position-x: center;    
+    background: url("../img/contact/contact2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 40%; 
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
       #hero-title {
+        margin-top:32px;
         color: $primColor;
         text-align: center;
         font-weight: 600;
@@ -23,14 +31,6 @@ section {
       }
       #hero-text {
         text-align: center;
-      }
-      #hero-more {
-        width: fit-content;
-        padding: 0.5em 1em;
-        text-align: center;
-        color: $primColor;
-        border: 1px solid $primColor;
-        border-radius: 0.2em;
       }
     }
   }
@@ -46,13 +46,59 @@ section {
     }
   }
   .contact-detail{
-    height: 3em;
+    height: auto;
+    padding-left: 10px;
     p{
       margin: unset;
       letter-spacing: 0.1em;      
     }
   }
-
-  // LOCATION
+  .contact-image {
+    img{
+      width: 4em;
+    }
+  }
+  .mr-costum-1{
+    margin-left: -1em;
+    margin-right: 1em;
+  }
+  .ml-costum-1{
+    margin-left: 1em;
+    margin-right: -1em;
+  }
   
+  .send-button {
+    width: fit-content;
+    padding: 0.5em 1em;
+    text-align: center;
+    color: $primColor;
+    border: 1px solid $primColor;
+    border-radius: 0.2em;
+  }
+  .title-text{
+    font-size: large;
+  }
+  .gmap_canvas{
+    margin-top: 0px;
+  }
+  // LOCATION
 }
+@media only screen and (max-width: map-get($grid-breakpoints, xl)) {
+  .mr-costum-1,.ml-costum-1, .m-costum-1{
+    margin: 1em !important;
+  }
+}
+
+@media only screen and (max-width: map-get($grid-breakpoints, sm)) { 
+  section {      
+    min-height: 50vh !important;
+    &#hero {
+      background-position: 100% -10%; 
+      background-size: cover;
+    }
+  }
+  .contact-image img{
+    width: 3em !important;
+  }
+}
+
