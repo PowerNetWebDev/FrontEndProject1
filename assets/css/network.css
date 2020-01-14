@@ -1,6 +1,6 @@
 @charset "UTF-8";
 * {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 p {
@@ -358,6 +358,10 @@ footer strong {
   opacity: 1;
 }
 
+.image-mobile {
+  display: none;
+}
+
 section#hero {
   background: url("../img/network/hero.png");
   background-position-x: center;
@@ -407,21 +411,15 @@ section#services {
 }
 
 section#sec-services .secservices-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   list-style: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   margin: unset;
   padding: unset;
 }
 
 section#sec-services .secservices-list .list-item {
   margin-top: 2.5em;
-  width: 25%;
+  width: 100%;
+  height: 100%;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
@@ -454,15 +452,14 @@ section#sec-services .secservices-list .list-item .list-body {
   background-position-x: center;
   background-position-y: center;
   margin: 0 1em;
-  padding: 4em 1em 2em 1em;
-  height: 100%;
+  padding: 3em 1em 4em 1em;
   border: 0.0625em solid rgba(33, 33, 33, 0.075);
   -webkit-box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
           box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
 }
 
 section#sec-services .secservices-list .list-item .list-body img {
-  height: 10em;
+  width: 100%;
 }
 
 section#sec-services .secservices-list .list-item .list-body p {
@@ -475,7 +472,92 @@ section#sec-services .secservices-list .list-item .list-body p {
   color: #757575;
 }
 
+section#services-advisory, section#services-advisory2 {
+  background: rgba(249, 249, 249, 0.705);
+  height: 50vh;
+}
+
 section#product-list div[class^=col-] img {
   width: 80%;
+}
+
+section h2.title-text {
+  font-size: x-large;
+}
+
+section h4.title-text {
+  font-size: large;
+}
+
+section .section-title {
+  margin-bottom: 0px !important;
+}
+
+footer {
+  background: #212121;
+}
+
+footer p {
+  color: #d6d4d4;
+}
+
+footer h4 {
+  color: #d6d4d4dc;
+}
+
+footer strong {
+  border-bottom: 0.1em solid #f44336;
+}
+
+footer .row {
+  padding: 2em 0;
+}
+
+footer .footer-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  section {
+    font-size: 13px;
+  }
+  #services-advisory, #services-advisory2 {
+    background: rgba(249, 249, 249, 0.527);
+    height: auto !important;
+    padding: 1em;
+  }
+  #services-advisory .img-overlay, #services-advisory2 .img-overlay {
+    display: none;
+  }
+  #hero #hero-title {
+    margin-bottom: 0.5em;
+    display: none;
+  }
+  #sec-services .secservices-list .list-item .list-body {
+    padding: 1em 5px 2em 5px !important;
+    font-size: 11px;
+  }
+  .image-mobile {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  footer {
+    font-size: 14px;
+    text-align: center;
+  }
+  footer img {
+    width: 80%;
+  }
+  footer .footer-web {
+    display: none;
+  }
+  footer .footer-mobile {
+    display: block;
+    color: #d6d4d4;
+  }
+  footer .row {
+    padding: 2em 0 0 0;
+  }
 }
 /*# sourceMappingURL=network.css.map */
