@@ -261,7 +261,8 @@ footer strong {
 }
 
 .service .service-body .service-img .card-img img {
-  height: 15em;
+  width: 90%;
+  height: auto;
   margin: 1em;
 }
 
@@ -290,7 +291,7 @@ footer strong {
 }
 
 .service .service-body .service-nav {
-  overflow: hidden;
+  overflow-x: scroll;
   list-style: none;
   margin: unset;
   padding: unset;
