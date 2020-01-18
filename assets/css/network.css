@@ -473,12 +473,50 @@ section#sec-services .secservices-list .list-item .list-body p {
 }
 
 section#services-advisory, section#services-advisory2 {
-  background: rgba(249, 249, 249, 0.705);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 240, 0.705)), to(white));
+  background: linear-gradient(rgba(240, 240, 240, 0.705), white);
   height: 50vh;
+}
+
+section#services-advisory img, section#services-advisory2 img {
+  height: 100%;
+  width: 100%;
 }
 
 section#product-list div[class^=col-] img {
   width: 80%;
+}
+
+section#contact-us {
+  margin-top: 3em;
+  margin-bottom: 10em;
+  padding: 0px;
+  min-height: 0px;
+  height: auto;
+  text-align: center;
+}
+
+section#contact-us p.heading {
+  font-size: 2em !important;
+}
+
+section#contact-us .contact-us {
+  text-align: center;
+  border-radius: 50px;
+  padding: 15px 50px;
+  color: white;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ECAB72), color-stop(#FC2727), to(#ECAB72));
+  background: linear-gradient(to right bottom, #ECAB72, #FC2727, #ECAB72);
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+
+section#contact-us a {
+  text-decoration: none;
+}
+
+section#contact-us .p-mobile {
+  display: none;
 }
 
 section h2.title-text {
@@ -517,37 +555,64 @@ footer .footer-mobile {
   display: none;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 1200px) {
+  #services-advisory, #services-advisory2 {
+    background: rgba(249, 249, 249, 0.705);
+    height: 50vh;
+  }
+  #services-advisory img, #services-advisory2 img {
+    height: 100%;
+    width: auto !important;
+  }
+  .secservices-list {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  nav {
+    font-size: 16px !important;
+    background: white !important;
+  }
+  .secservices-list {
+    font-size: 11px;
+  }
+  .product-image img {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   section {
     font-size: 13px;
   }
-  #services-advisory, #services-advisory2 {
-    background: rgba(249, 249, 249, 0.527);
+  section#services-advisory, section#services-advisory2 {
+    background: white !important;
     height: auto !important;
     padding: 1em;
   }
-  #services-advisory .img-overlay, #services-advisory2 .img-overlay {
+  section#services-advisory .img-overlay, section#services-advisory2 .img-overlay {
     display: none;
   }
-  #hero #hero-title {
+  section#hero #hero-title {
     margin-bottom: 0.5em;
     display: none;
   }
-  #sec-services .secservices-list .list-item .list-body {
+  section#sec-services .secservices-list .list-item .list-body {
     padding: 1em 5px 2em 5px !important;
-    font-size: 11px;
+    font-size: 9px;
   }
-  .image-mobile {
+  section .image-mobile {
     display: block;
     margin: 0 auto;
     text-align: center;
   }
   footer {
-    font-size: 14px;
+    font-size: 14px !important;
     text-align: center;
   }
   footer img {
-    width: 80%;
+    width: 60%;
   }
   footer .footer-web {
     display: none;
@@ -558,6 +623,29 @@ footer .footer-mobile {
   }
   footer .row {
     padding: 2em 0 0 0;
+  }
+  .product-image img {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #sec-services .secservices-list .list-item .list-body {
+    padding: 1em 5px 2em 5px !important;
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  section#contact-us p.heading {
+    font-size: 1.5em !important;
+    padding: 0 1em;
+  }
+  section#contact-us .p-mobile {
+    display: inline;
+  }
+  section#contact-us .p-web {
+    display: none;
   }
 }
 /*# sourceMappingURL=network.css.map */
