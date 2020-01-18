@@ -55,7 +55,7 @@ navHide = () => {
         var currY = el.scrollTop(),
             
             // determine current scroll direction
-            y = (currY > lastY) ? 'down' : ((currY === lastY) ? 'none' : 'up');
+            y = (currY > lastY) || (currY !== 0) ? 'down' : ((currY === lastY) ? 'none' : 'up');
             console.log(y)
 
         // do something here…
