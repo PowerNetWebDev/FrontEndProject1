@@ -59,10 +59,12 @@ navHide = () => {
             console.log(y)
 
         // do something here…
-        if(y === 'up'){
-            $(navbar).removeClass('hide');
-        }else{
-            $(navbar).addClass('hide');
+        if(!($('.navbar-collapse, .dropdown-menu').hasClass('show'))){
+            if(y === 'up'){
+                $(navbar).removeClass('hide');
+            }else{
+                $(navbar).addClass('hide');
+            }
         }
 
         // update last scroll position to current position
