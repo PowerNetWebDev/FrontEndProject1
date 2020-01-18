@@ -3,10 +3,11 @@
 
 $(document).ready(() => {
     navFade();
+    navHide();
 });
 
 $(window).on('scroll', () => {
-    navFade();
+    navFade();    
 });
 
 isScrolled = (el, funcWhile) => {
@@ -40,6 +41,32 @@ navFade = () => {
         "background-color": `rgba(255,255,255,${opacity})`,
         "box-shadow": `0 8px 48px 8px rgba(33, 33, 33, ${(0.1 * opacity)})`,
         "border-bottom": `0.5px solid rgba(0,0,0,${opacity / 8}`
+    });
+}
+
+navHide = () => {
+    var el = $(window);
+    var navbar = $('nav.navbar');
+    // initialize last scroll position
+    lastY = el.scrollTop();
+    
+    el.on('scroll', function() {
+        // get current scroll position
+        var currY = el.scrollTop(),
+            
+            // determine current scroll direction
+            y = (currY > lastY) ? 'down' : ((currY === lastY) ? 'none' : 'up');
+            console.log(y)
+
+        // do something here…
+        if(y === 'up'){
+            $(navbar).removeClass('hide');
+        }else{
+            $(navbar).addClass('hide');
+        }
+
+        // update last scroll position to current position
+        lastY = currY;
     });
 }
 

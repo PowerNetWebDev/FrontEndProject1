@@ -36,6 +36,13 @@ a {
 // NAVIGATION BAR
 nav {
   font-size: 1em;
+  position: absolute;
+  top: 0;
+  transition: all ease-in-out 0.2s;  
+  &.hide{
+    top: -4em;
+    box-shadow: none !important;
+  }
   &#navlogo {
     width: auto;
     height: 32px;

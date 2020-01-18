@@ -30,6 +30,16 @@ a:hover {
 
 nav {
   font-size: 1em;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+nav.hide {
+  top: -4em;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 nav#navlogo {
@@ -207,38 +217,51 @@ footer strong {
   width: 100%;
 }
 
-.service .service-body .service-text {
-  height: 100%;
-  background: white;
-  position: relative;
-  padding: 1em;
-  border-radius: 0.5em;
-  border: 0.0625em solid rgba(33, 33, 33, 0.1);
-  -webkit-box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
-          box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
+.service {
+  margin: 4em 0;
 }
 
-.service .service-body .service-text .arrow-left, .service .service-body .service-text .arrow-right {
-  position: absolute;
-  top: calc(50% - 0.75em);
-  right: calc(-1.5em + 0.77em);
-  width: 1.5em;
-  height: 1.5em;
-  background: white;
-  -webkit-box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
-          box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
-  border: 0.0625em solid rgba(33, 33, 33, 0.1);
-  border-color: rgba(33, 33, 33, 0.2);
-  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
-          clip-path: polygon(0 0, 0 100%, 100% 100%);
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+.service .service-body {
+  margin: 2em 0;
 }
 
-.service .service-body .service-text .arrow-right {
-  position: absolute;
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
+@media (min-width: 768px) {
+  .service .service-body .service-text {
+    height: 100%;
+    background: white;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 0.0625em solid rgba(33, 33, 33, 0.1);
+    -webkit-box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
+            box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
+    position: relative;
+  }
+}
+
+@media (min-width: 768px) {
+  .service .service-body .service-text .arrow-left, .service .service-body .service-text .arrow-right {
+    position: absolute;
+    top: calc(50% - 0.75em);
+    left: calc(-1.5em + 0.77em);
+    width: 1.5em;
+    height: 1.5em;
+    background: white;
+    -webkit-box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
+            box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
+    border: 0.0625em solid rgba(33, 33, 33, 0.1);
+    border-color: rgba(33, 33, 33, 0.2);
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
+            clip-path: polygon(0 0, 0 100%, 100% 100%);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .service .service-body .service-text .arrow-right {
+    position: absolute;
+    left: unset;
+    right: calc(-1.5em + 0.77em);
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+  }
 }
 
 .service .service-body .service-img {
@@ -248,7 +271,7 @@ footer strong {
 }
 
 .service .service-body .service-img .card-img img {
-  width: 70%;
+  width: 90%;
   height: auto;
   margin: 1em;
 }
@@ -278,7 +301,7 @@ footer strong {
 }
 
 .service .service-body .service-nav {
-  overflow: hidden;
+  overflow-x: scroll;
   list-style: none;
   margin: unset;
   padding: unset;
