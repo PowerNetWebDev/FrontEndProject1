@@ -7,15 +7,15 @@ $(document).ready(() => {
 });
 
 
-servicesSetup = () => {
-    heroItem = $('.services-list .hero-container');
-    vListItem = $('.services-list .vertical-list .list-item');
-    $(vListItem).on('click', (e) => {
-        index = $(vListItem).index(e.currentTarget);
-        $('.services-list .vertical-list .list-item.active').removeClass('active');
-        $(`.services-list .vertical-list .list-item:eq(${index})`).addClass('active');
-        $('.services-list .hero-container.active').removeClass('animated fadeIn');        
-        $('.services-list .hero-container.active').removeClass('active animated fadeIn');
-        $(heroItem[index]).addClass('active animated fadeIn');
-    });
+servicesSetup = function() {        
+    $('.service').each(function() {
+        console.log($(this));
+        $(this).find('.service-nav-item').on('click', (e) => {
+            index = $(e.currentTarget).index();                        
+            $(this).find('.service-nav-item.active').removeClass('active');
+            $(this).find('.service-feature.active').removeClass('active');
+            $(this).find(`.service-nav-item:eq(${index})`).addClass('active');        
+            $(this).find(`.service-feature:eq(${index})`).addClass('active');        
+        })
+    });    
 }

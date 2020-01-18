@@ -3,7 +3,7 @@
 }
 
 p {
-  font-size: 1.2em !important;
+  font-size: medium !important;
   line-height: 1.8em !important;
 }
 
@@ -25,6 +25,10 @@ a:hover {
 
 .dropdown-menu .dropdown-item:active {
   background: #f44336 !important;
+}
+
+nav {
+  font-size: 1em;
 }
 
 nav#navlogo {
@@ -104,6 +108,7 @@ section.titled-section .section-title .title-body {
 
 section.titled-section .section-title .title-body .title-text {
   display: inline;
+  font-size: large;
   font-weight: 500;
   text-indent: 0.5em;
   letter-spacing: 0.5em;
@@ -161,6 +166,20 @@ section.imaged-section .img-overlay.right {
   right: 0;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+}
+
+.ballon-container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.ballon-container .ballon {
+  padding: 1.5em 2em;
+  border-radius: 0.5em;
+  border: 0.0625em solid rgba(33, 33, 33, 0.1);
+  -webkit-box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
+          box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1);
 }
 
 footer {
@@ -443,7 +462,7 @@ section#client svg {
 }
 
 section#client .card {
-  margin: 1.75em 1em;
+  margin: 1em 0;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   border: 0.0625em solid rgba(33, 33, 33, 0.1);
