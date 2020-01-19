@@ -41,8 +41,13 @@
       border: $primBorder !important;
       box-shadow: $primShadow !important;      
       .card-img{                
-        img{          
-          height: 30vh;
+        img{         
+          @media (min-width: map-get($grid-breakpoints, lg)) {          
+            height: 30vh;
+            width: auto;
+          }
+          width: 80%; 
+          height: auto;
           margin: 1em;
         }        
       }
@@ -77,13 +82,22 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 5em;
+        width: calc(#{percentage($number: 1/3)} - #{0.125em * 3});        
         margin: 0.125em;
         height: 5em;
         color: $darkColor;
         background: white;
         border: $primBorder !important;
         box-shadow: $primShadow !important;
+        @media (min-width: map-get($grid-breakpoints, sm)) {          
+          width: calc(#{percentage($number: 1/4)} - #{0.125em * 4});        
+        }        
+        @media (min-width: map-get($grid-breakpoints, lg)) {          
+          width: calc(#{percentage($number: 1/5)} - #{0.125em * 5});           
+        }
+        @media (min-width: map-get($grid-breakpoints, xl)) {          
+          width: calc(#{percentage($number: 1/6)} - #{0.125em * 6});           
+        }
         &.active{
           color: white;          
           border-color: rgba($color: $primColorAlt, $alpha: 0.5) !important;
