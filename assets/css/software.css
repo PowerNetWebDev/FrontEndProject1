@@ -521,20 +521,14 @@ section#whyus .whyus-list .list-item .list-body p {
   }
 }
 
-section#how {
-  position: relative;
-  background: url("../img/software/how1.png");
-  background-repeat: no-repeat;
-  background-position-y: 6em;
-  background-position-x: center;
-  background-size: 60%;
+section#how .how-we {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-section#how .section-title {
-  left: 50%;
-  top: 0;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  position: absolute;
+section#how .how-we img {
+  width: 100%;
 }
 /*# sourceMappingURL=software.css.map */

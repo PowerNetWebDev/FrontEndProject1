@@ -1,15 +1,13 @@
 $(document).ready(() => {
     $('#hero-more').on('click',() => {
         jump('section:eq(1)')
-    })
-    vListSetup();
+    })    
     servicesSetup();
 });
 
 
 servicesSetup = function() {        
-    $('.service').each(function() {
-        console.log($(this));
+    $('.service').each(function() {        
         $(this).find('.service-nav-item').on('click', (e) => {
             index = $(e.currentTarget).index();                        
             $(this).find('.service-nav-item.active').removeClass('active');

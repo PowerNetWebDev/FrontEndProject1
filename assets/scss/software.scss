@@ -119,18 +119,13 @@ section {
   }
 
   // HOW WE WORK
-  &#how{
-    position: relative;
-    .section-title{
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
-      position: absolute;
+  &#how{        
+    .how-we{
+      width: 100%;
+      height: fit-content;      
+      img{
+        width: 100%;
+      }
     }
-    background: url('../img/software/how1.png');
-    background-repeat: no-repeat;
-    background-position-y: 6em;
-    background-position-x: center;
-    background-size: 60%;
   }
 }
