@@ -274,8 +274,16 @@ footer strong {
 }
 
 .service .service-body .service-img .card-img img {
-  height: 30vh;
+  width: 80%;
+  height: auto;
   margin: 1em;
+}
+
+@media (min-width: 992px) {
+  .service .service-body .service-img .card-img img {
+    height: 30vh;
+    width: auto;
+  }
 }
 
 .service .service-body .service-img .service-feature {
@@ -324,14 +332,34 @@ footer strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 5em;
+  width: calc(33.33333% - 0.375em);
   margin: 0.125em;
+  padding: 0.2em;
+  overflow: hidden;
   height: 5em;
   color: #212121;
   background: white;
   border: 0.0625em solid rgba(33, 33, 33, 0.1) !important;
   -webkit-box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1) !important;
           box-shadow: 0 0.125em 0.1em rgba(33, 33, 33, 0.1) !important;
+}
+
+@media (min-width: 576px) {
+  .service .service-body .service-nav .service-nav-item {
+    width: calc(25% - 0.5em);
+  }
+}
+
+@media (min-width: 992px) {
+  .service .service-body .service-nav .service-nav-item {
+    width: calc(20% - 0.625em);
+  }
+}
+
+@media (min-width: 1200px) {
+  .service .service-body .service-nav .service-nav-item {
+    width: calc(16.66667% - 0.75em);
+  }
 }
 
 .service .service-body .service-nav .service-nav-item.active {
