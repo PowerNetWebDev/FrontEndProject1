@@ -334,6 +334,8 @@ footer strong {
           align-items: center;
   width: calc(33.33333% - 0.375em);
   margin: 0.125em;
+  padding: 0.2em;
+  overflow: hidden;
   height: 5em;
   color: #212121;
   background: white;
