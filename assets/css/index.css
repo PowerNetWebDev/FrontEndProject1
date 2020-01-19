@@ -512,6 +512,7 @@ section#client {
 section#client svg {
   position: absolute;
   top: 60%;
+  left: 0;
 }
 
 section#client .card {
