@@ -98,7 +98,7 @@
 .timeline .timeline-item .timeline-dot {
   display: none;
   position: absolute;
-  top: 4em;
+  top: 5em;
   width: 1em;
   height: 1em;
   border-radius: 2em;
