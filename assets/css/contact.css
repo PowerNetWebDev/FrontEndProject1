@@ -8,6 +8,7 @@ html {
 }
 
 p {
+  font-size: medium !important;
   line-height: 1.8em !important;
 }
 
@@ -32,7 +33,7 @@ a:hover {
 }
 
 nav {
-  font-size: 1em;
+  font-size: 1em !important;
   position: absolute;
   top: 0;
   -webkit-transition: all ease-in-out 0.2s;
@@ -411,15 +412,6 @@ footer .row {
   height: auto;
 }
 
-html {
-  font-size: 14px !important;
-}
-
-nav {
-  font-size: 16px !important;
-  background: white !important;
-}
-
 section {
   min-height: 55vh !important;
 }
@@ -580,7 +572,6 @@ footer p {
     width: 3em !important;
   }
   footer p {
-    font-size: 14px !important;
     text-align: center;
   }
   footer img {

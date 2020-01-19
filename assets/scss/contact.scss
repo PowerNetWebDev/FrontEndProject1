@@ -2,16 +2,8 @@
 @import "./components/common";
 @import "./components/software_services-layout";
 
-html {
-  font-size: 14px !important;
-}
-nav{
-  font-size: 16px !important;
-  background: white !important;
-}
 section {  
-  min-height: 55vh !important;
-  
+  min-height: 55vh !important;  
   // HERO
   &#hero {
     background: url("../img/contact/contact2.jpg");
@@ -156,7 +148,7 @@ footer {
   }
   footer {
     p{
-      font-size: 14px !important;
+      // font-size: 14px !important;
       text-align: center;
     }
     img {

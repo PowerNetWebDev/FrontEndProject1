@@ -19,6 +19,9 @@ section {
   &#bio {
     padding-top: 4em;
     min-height: 70vh;
+    #biologo{
+      max-width: 100%;
+    }
   }
 
   // SERVICES
