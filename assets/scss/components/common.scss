@@ -167,9 +167,9 @@ section {
 
 // FOOTER
 footer {
-  background: $darkColor;
-  font-size: 14px !important;
   text-align: center;
+  background: $darkColor;
+  font-size: 14px !important;  
   p {
     color: #d6d4d4;
     font-size: 1em !important;
@@ -184,15 +184,16 @@ footer {
     width: 60%;
   }
   .footer-web{
-    display: none;
+    display: none;    
   }
   .footer-mobile{
-    display: block;    
+    display: block;        
   }
   .row{
     padding: 2em 0 0 0;
   }
   @media only screen and (min-width: map-get($grid-breakpoints, md)) {
+    text-align: left;
     .footer-web{
       display: block;
     }

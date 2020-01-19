@@ -201,9 +201,9 @@ section.imaged-section .img-overlay.right {
 }
 
 footer {
+  text-align: center;
   background: #212121;
   font-size: 14px !important;
-  text-align: center;
 }
 
 footer p {
@@ -236,6 +236,9 @@ footer .row {
 }
 
 @media only screen and (min-width: 768px) {
+  footer {
+    text-align: left;
+  }
   footer .footer-web {
     display: block;
   }
