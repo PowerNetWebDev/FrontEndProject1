@@ -3,6 +3,7 @@ $(document).ready(() => {
         jump('section:eq(1)')
     })    
     servicesSetup();
+    AOS.init();
 });
 
 
