@@ -1,7 +1,7 @@
 @import 'variable';
 
 .service{
-  margin: 4em 0;  
+  margin: 1em 0;  
   .service-body{
     margin: 2em 0;
     .service-text{
@@ -41,9 +41,8 @@
       border: $primBorder !important;
       box-shadow: $primShadow !important;      
       .card-img{                
-        img{
-          width: 90%;
-          height: auto;
+        img{          
+          height: 30vh;
           margin: 1em;
         }        
       }
@@ -68,7 +67,8 @@
       }      
     }  
     .service-nav{
-      overflow-x: scroll;
+      display: flex;
+      flex-wrap: wrap;
       list-style: none;
       margin: unset;
       padding: unset;
@@ -77,9 +77,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-width: 6em;
+        width: 5em;
         margin: 0.125em;
-        min-height: 6em;
+        height: 5em;
         color: $darkColor;
         background: white;
         border: $primBorder !important;

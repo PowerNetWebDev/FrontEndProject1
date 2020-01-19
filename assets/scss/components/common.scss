@@ -65,7 +65,9 @@ nav {
 
 // SECTION
 section {
-  min-height: 90vh;
+  &#hero{
+    min-height: 90vh;
+  }
   display: flex;
   flex-direction: column;
   justify-content: center;
