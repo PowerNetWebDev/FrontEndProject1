@@ -88,8 +88,8 @@ timelineSetup = (selectorId) => {
     $(selectorId).append('<span class="timeline-vr d-none d-lg-block"></span>');
     $(selectorId).find('.timeline-item .timeline-body').append('<span class="timeline-arrow"></span>');
     $(selectorId).find('.timeline-item').append('<span class="timeline-dot"></span>');
-    $(selectorId).find('.timeline-item:odd .timeline-body .timeline-img').addClass('order-md-2');
-    $(selectorId).find('.timeline-item:odd .timeline-body .timeline-txt').addClass('order-md-1');
+    $(selectorId).find('.timeline-item:odd .timeline-body .timeline-img').addClass('order-lg-2');
+    $(selectorId).find('.timeline-item:odd .timeline-body .timeline-txt').addClass('order-lg-1');
 
     timeline = $(selectorId).find('.timeline-body');
     timelineHeight = $(timeline[timeline.length - 1]).offset().top + $(timeline[timeline.length - 1]).outerHeight(true) - $(timeline[0]).offset().top;

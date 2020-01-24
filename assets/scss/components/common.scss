@@ -28,7 +28,9 @@ a {
 // OVERRIDE BOOTSTRAP.CSS
 .dropdown-menu {
   border-radius: 0 !important;
-  border: 0.0625em solid rgba($color: $darkColor, $alpha: 0.025) !important;  
+  border: 0.0625em solid rgba($color: $darkColor, $alpha: 0.025) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  font-size: 15px !important;
   .dropdown-item {
     &:active {
       background: $primColor !important;

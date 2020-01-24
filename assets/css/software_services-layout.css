@@ -60,7 +60,7 @@
 
 @media (min-width: 992px) {
   .service .service-body .service-img .card-img img {
-    height: 30vh;
+    height: 20vh;
     width: auto;
   }
 }
@@ -69,7 +69,7 @@
   display: none;
   -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
-  margin: 0;
+  margin: 0 5px !important;
   padding: 1em !important;
 }
 

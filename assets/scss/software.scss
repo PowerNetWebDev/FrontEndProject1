@@ -2,6 +2,10 @@
 @import "./components/common";
 @import "./components/software_services-layout";
 
+nav{
+  font-size: 16px !important;
+  // background: white !important;
+}
 section {    
   // HERO
   &#hero {    
@@ -11,6 +15,7 @@ section {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-top: 32px;
       #hero-title {
         color: $primColor;
         text-align: center;
@@ -30,6 +35,39 @@ section {
         border-radius: 0.2em;
       }
     }
+  }
+
+  &#web{
+    position: relative;
+    background: white;
+    z-index: 1;
+    .separator-web1 {
+      position: absolute;
+      z-index: -1;
+      top: -9%;
+      left: 0;
+      height: 220vh;
+      width: 100%;
+      clip-path: polygon(50% 3%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+      background: $lgreyColor;
+      background: linear-gradient(rgba($color: $lgreyColor, $alpha: 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+    .separator-web {
+      position: absolute;
+      z-index: -1;
+      top: -6%;
+      left: 0;
+      height: 220vh;
+      width: 100%;
+      clip-path: polygon(50% 3%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+      background: $lgreyColor;
+      background: linear-gradient(rgba($color: $lgreyColor, $alpha: 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+
+  &#desktop, &#mobile, &#ai {
+    position: relative;
+    z-index: 1;
   }
 
   // WHY US
@@ -124,6 +162,48 @@ section {
       height: fit-content;      
       img{
         width: 100%;
+      }
+    }
+  }
+  // Contact Us
+  &#contact-us{
+    margin-top: 3em;
+    margin-bottom: 10em;
+    padding: 0px;
+    min-height: 0px;
+    height: auto;
+    text-align: center;
+    p.heading{
+      font-size: 2em !important;
+    }
+    .contact-us {
+      text-align: center;
+      border-radius: 50px;
+      padding:15px 50px;
+      color: white;
+      background: linear-gradient(to right bottom,#ECAB72,#FC2727,#ECAB72);
+      transition: all 0.2s ease-out 0s;
+    }
+    a {
+      text-decoration: none;
+    }
+    .p-mobile {
+      display: none;
+    }
+  }
+}
+@media only screen and (max-width: map-get($grid-breakpoints, sm)) {
+  section { 
+    &#contact-us{
+      p.heading{
+        font-size: 1.5em !important;
+        padding: 0 1em;
+      }
+      .p-mobile {
+        display: inline;
+      }
+      .p-web{
+        display: none;
       }
     }
   }

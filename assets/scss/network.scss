@@ -3,16 +3,20 @@
 @import "./components/software_services-layout";
 
 
+nav{
+  font-size: 16px !important;
+  // background: white !important;
+}
 .image-mobile {
   display: none;
 }
 section {  
-  
   // HERO
   &#hero {
     background: url("../img/network/hero.png");
     background-position-x: center;
     .container {
+      margin-top: 32px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -96,13 +100,11 @@ section {
   &#services-advisory, &#services-advisory2{
     background: linear-gradient(rgba(240, 240, 240, 0.705),white);
     height: 50vh;
+    overflow: hidden;
     img {
       height: 100%;
       width: 100%;
     }
-    // svg.svg-mobile{
-    //   display: none;
-    // }
   }
 
   // Product List
@@ -140,17 +142,6 @@ section {
       display: none;
     }
   }
-
-  // Common
-  h2.title-text{
-    font-size: x-large;
-  }
-  h4.title-text{
-    font-size: large;
-  }
-  .section-title {
-    margin-bottom: 0px !important;
-  }
 }
 
 //Footer
@@ -183,16 +174,16 @@ footer {
     }
   }
   .secservices-list{
-    font-size: 13px;
+    p{
+      font-size: 13px !important;
+    }
   }
 }
 @media only screen and (max-width: map-get($grid-breakpoints, lg)) {
-  nav{
-    font-size: 16px !important;
-    background: white !important;
-  }
   .secservices-list{
-    font-size: 11px;
+    p{
+      font-size: 11px !important;
+    }
   }
   .product-image{
     img {
@@ -215,7 +206,6 @@ footer {
     &#hero {
       #hero-title {
         margin-bottom: 0.5em;
-        display: none;
       }
     }
     &#sec-services{
@@ -224,7 +214,9 @@ footer {
         .list-item{
           .list-body{
             padding: 1em 5px 2em 5px !important;
-            font-size: 9px;
+            p{
+              font-size: 9px !important;
+            }
           }
         }
       }
@@ -265,23 +257,13 @@ footer {
         .list-item{
           .list-body{
             padding: 1em 5px 2em 5px !important;
-            font-size: 9px;
+            p{
+              font-size: 9px !important;
+            }
           }
         }
       }
     }
-    // &#services-advisory,&#services-advisory2{
-    //   position: relative;
-    //   z-index: -2;
-    //   svg.svg-mobile{
-    //     display:block;
-    //     position: absolute;
-    //     top: 20%;
-    //     left: 0;
-    //     z-index: -1;
-    //     width: 100%;
-    //   }
-    // }
   }
 }
 
@@ -297,6 +279,18 @@ footer {
       }
       .p-web{
         display: none;
+      }
+    }
+    &#sec-services{
+      .secservices-list{
+        .list-item{
+          .list-body{
+            padding: 1em 5px 2em 5px !important;
+            p{
+              font-size: 13px !important;
+            }
+          }
+        }
       }
     }
   }

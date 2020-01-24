@@ -4,14 +4,19 @@
 @import "./components/common";
 @import "./components/timeline-layout";
 
+nav{
+  font-size: 16px !important;
+  // background: rgba(255, 255, 255, 0.7) !important;
+}
 // HERO(CAROUSEL)
 section {
+  overflow: hidden;
   &#hero {
     display: block;
     margin: unset;
     padding: unset;
     .carousel-item img {
-      height: 90vh;
+      height: 100vh;
     }
   }
 
@@ -28,7 +33,7 @@ section {
   &#feat {
     position: relative;
     background: $lgreyColor;
-    background: linear-gradient(135deg, rgba($color: $lgreyColor, $alpha: 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(rgba($color: $lgreyColor, $alpha: 1) 0%, rgba(255, 255, 255, 0) 100%);
     .separator-feat {
       position: absolute;
       top: 0;
@@ -94,9 +99,17 @@ section {
     }
   }
 }
+
 @media (min-width: map-get($grid-breakpoints, md)) {  
   .card-img-top {
     width: auto;
     height: 80%;
+  }
+  .timeline-item{
+    .timeline-body{
+      img {
+        width: 50% !important;
+      }
+    }
   }
 }

@@ -1,5 +1,5 @@
 * {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 html {
@@ -25,6 +25,8 @@ a:hover {
 .dropdown-menu {
   border-radius: 0 !important;
   border: 0.0625em solid rgba(33, 33, 33, 0.025) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  font-size: 15px !important;
 }
 
 .dropdown-menu .dropdown-item:active {
@@ -450,6 +452,14 @@ footer .row {
   opacity: 1;
 }
 
+nav {
+  font-size: 16px !important;
+}
+
+section {
+  overflow: hidden;
+}
+
 section#hero {
   display: block;
   margin: unset;
@@ -457,7 +467,7 @@ section#hero {
 }
 
 section#hero .carousel-item img {
-  height: 90vh;
+  height: 100vh;
 }
 
 section#bio {
@@ -472,7 +482,8 @@ section#bio #biologo {
 section#feat {
   position: relative;
   background: #f5f5f5;
-  background: linear-gradient(135deg, whitesmoke 0%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(whitesmoke 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 section#feat .separator-feat {
@@ -563,6 +574,9 @@ section#client .card .card-body .card-img-top {
   .card-img-top {
     width: auto;
     height: 80%;
+  }
+  .timeline-item .timeline-body img {
+    width: 50% !important;
   }
 }
 /*# sourceMappingURL=index.css.map */
