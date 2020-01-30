@@ -261,6 +261,88 @@ footer .row {
   width: 100%;
 }
 
+.animated-icon3 {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.animated-icon3 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.animated-icon3 span {
+  background: #e65100;
+}
+
+.animated-icon3 span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+.animated-icon3 span:nth-child(2) {
+  top: 10px;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+.animated-icon3 span:nth-child(3) {
+  top: 20px;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+.animated-icon3.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0px;
+  left: 8px;
+}
+
+.animated-icon3.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.animated-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 21px;
+  left: 8px;
+}
+
+@media only screen and (max-width: 992px) {
+  nav {
+    font-size: 16px !important;
+    background: white !important;
+  }
+  nav button.navbar-toggler:focus, nav button.navbar-toggler:active {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+  nav .navbar-toggler {
+    border: none;
+  }
+}
+
 .service {
   margin: 1em 0;
 }
@@ -419,6 +501,14 @@ footer .row {
 
 nav {
   font-size: 16px !important;
+  background: white !important;
+}
+
+hr.hr-separator {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f0f0f0), color-stop(#dddddd), to(#f0f0f0));
+  background-image: linear-gradient(to right, #f0f0f0, #dddddd, #f0f0f0);
 }
 
 section#hero {
@@ -476,10 +566,10 @@ section#web .separator-web1 {
   z-index: -1;
   top: -9%;
   left: 0;
-  height: 220vh;
+  height: 10vh;
   width: 100%;
-  -webkit-clip-path: polygon(50% 3%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
-          clip-path: polygon(50% 3%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+  -webkit-clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+          clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
   background: #f5f5f5;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 245, 245, 0.4)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(rgba(245, 245, 245, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
@@ -490,10 +580,10 @@ section#web .separator-web {
   z-index: -1;
   top: -6%;
   left: 0;
-  height: 220vh;
+  height: 10vh;
   width: 100%;
-  -webkit-clip-path: polygon(50% 3%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
-          clip-path: polygon(50% 3%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+  -webkit-clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+          clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
   background: #f5f5f5;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 245, 245, 0.6)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(rgba(245, 245, 245, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
@@ -683,6 +773,40 @@ section#contact-us .p-mobile {
   display: none;
 }
 
+.service-text ul {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: medium;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 1200px) {
+  #whyus {
+    position: relative;
+    width: 100% !important;
+  }
+  #whyus svg {
+    position: absolute !important;
+    top: 30%;
+    left: 0px;
+    -webkit-transform: scaleY(2) !important;
+            transform: scaleY(2) !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #whyus {
+    position: relative;
+    width: 100% !important;
+  }
+  #whyus svg {
+    position: absolute !important;
+    top: 40%;
+    left: 0px;
+    -webkit-transform: scaleY(4) !important;
+            transform: scaleY(4) !important;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   section#contact-us p.heading {
     font-size: 1.5em !important;
@@ -693,6 +817,19 @@ section#contact-us .p-mobile {
   }
   section#contact-us .p-web {
     display: none;
+  }
+  #whyus {
+    position: relative;
+    width: 100% !important;
+    z-index: 0;
+  }
+  #whyus svg {
+    position: absolute !important;
+    top: 60% !important;
+    left: 0px;
+    -webkit-transform: scaleY(7) !important;
+            transform: scaleY(7) !important;
+    z-index: -1;
   }
 }
 /*# sourceMappingURL=software.css.map */

@@ -70,7 +70,7 @@ section {
     position: relative;
     svg {
       position: absolute;
-      top: 60%;
+      top: 45%;
       left: 0;
     }
     .card {
@@ -100,7 +100,22 @@ section {
   }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {  
+@media only screen and (max-width: map-get($grid-breakpoints, xl)) {
+  #client { 
+    // background: black;
+    position: relative ;
+    width: 100% !important;
+    svg {
+      position: absolute !important;
+      top: 50% !important;
+      left: 0px;
+      // background: yellow;
+      transform: scaleY(1) !important;
+    }
+  }
+}
+
+@media only screen and (max-width: map-get($grid-breakpoints, md)) {
   .card-img-top {
     width: auto;
     height: 80%;
@@ -112,4 +127,36 @@ section {
       }
     }
   }
+  #client {
+    // background: black;
+    position: relative ;
+    width: 100% !important;
+    svg {
+      position: absolute !important;
+      top: 75% !important;
+      left: 0px;
+      // background: yellow;
+      transform: scaleY(3) !important;
+    }
+  }
 }
+
+
+@media only screen and (max-width: map-get($grid-breakpoints, sm)) {
+  #client {
+    // background: black;
+    position: relative ;
+    width: 100% !important;
+    z-index: 0;
+    svg {
+      position: absolute !important;
+      top: 70% !important;
+      left: 0px;
+      // background: yellow;
+      transform: scaleY(4) !important;
+      z-index: -1;
+    }
+  }
+}
+
+
