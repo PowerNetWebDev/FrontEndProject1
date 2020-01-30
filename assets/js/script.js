@@ -3,7 +3,8 @@
 
 $(document).ready(() => {
     navFade();
-    navHide();
+    // navHide();
+    navAnimate();
 });
 
 $(window).on('scroll', () => {
@@ -102,4 +103,18 @@ timelineSetup = (selectorId) => {
 
 vListSetup = () => {
     $('.vertical-list.ballon .list-body').append('<span class="list-arrow"></span>');
+}
+
+navAnimate = () => {
+    $('.first-button').on('click', function () {
+    $('.animated-icon1').toggleClass('open');
+    });
+    $('.second-button').on('click', function () {
+
+    $('.animated-icon2').toggleClass('open');
+    });
+    $('.third-button').on('click', function () {
+
+    $('.animated-icon3').toggleClass('open');
+    });
 }

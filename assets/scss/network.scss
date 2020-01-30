@@ -5,7 +5,7 @@
 
 nav{
   font-size: 16px !important;
-  // background: white !important;
+  background: white !important;
 }
 .image-mobile {
   display: none;
@@ -193,6 +193,7 @@ footer {
 }
 @media only screen and (max-width: map-get($grid-breakpoints, md)) {
   section{
+    padding-bottom: 0px!important;
     font-size: 13px;
     &#services-advisory, &#services-advisory2{
       min-height: 0;
